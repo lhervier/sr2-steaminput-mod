@@ -163,14 +163,10 @@ namespace Assets.Scripts {
                     return SR2ActionSets.Map;
                 }
 
-                bool isEva = false;
                 foreach( ICommandPod pod in Game.Instance.FlightScene.CraftNode.CraftScript.CommandPods ) {
                     if( pod.EvaScript != null && pod.EvaScript.EvaActive ) {
-                        isEva = true;
+                        return SR2ActionSets.EVA;
                     }
-                }
-                if( isEva ) {
-                    return SR2ActionSets.EVA;
                 }
                 
                 return SR2ActionSets.Flight;
