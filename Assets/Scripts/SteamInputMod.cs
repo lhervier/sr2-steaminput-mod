@@ -106,9 +106,16 @@ namespace Assets.Scripts {
         // </summary>
         public void TriggerActionSetChange() {
             LOGGER.Log("Triggering action set change in " + DELAY +" frames");
-            this.delayedActionDaemon.TriggerDelayedAction(this._TriggerActionSetChange, DELAY);
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
         }
-        private void _TriggerActionSetChange() {
+        
+        // <summary>
+        // Change the action set
+        // </summary>
+        private void ChangeActionSet() {
             if( !this.controllerDaemon.ControllerConnected ) {
                 LOGGER.Log("No controller connected... Unable to change action set");
                 return;
@@ -176,7 +183,7 @@ namespace Assets.Scripts {
         // </summary>
         private void OnControllerDisconnected() {
             // Canceling eventual action set change
-            this.delayedActionDaemon.CancelDelayedAction(this._TriggerActionSetChange);
+            this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
 
             // Unhooks to KSP
             if( Game.InFlightScene ) {
