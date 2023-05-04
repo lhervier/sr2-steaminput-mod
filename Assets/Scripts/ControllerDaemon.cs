@@ -167,7 +167,6 @@ namespace Assets.Scripts {
                     this.controllerHandle = this._controllerHandles[0];
                     this.ControllerConnected = true;
                     this.LoadActionSets();
-                    this.StartCoroutine(this.SayHello());
                     this.OnControllerConnected.Fire();
                 }
 
@@ -203,29 +202,6 @@ namespace Assets.Scripts {
         // </summary>
         private void UnloadActionSets() {
             this.actionsSetsHandles.Clear();
-        }
-
-        // <summary>
-        //  Trigger a set of pulses on the current controller to say hello
-        // </summary>
-        private IEnumerator SayHello() {
-            if( this.ControllerConnected ) {
-                LOGGER.Log("Hello new Controller !!");
-                for( int i = 0; i < 4; i++ ) {
-                    SteamInput.Legacy_TriggerHapticPulse(
-                        this.controllerHandle, 
-                        Steamworks.ESteamControllerPad.k_ESteamControllerPad_Right, 
-                        ushort.MaxValue
-                    );
-                    yield return new WaitForSeconds(0.1f);
-                    SteamInput.Legacy_TriggerHapticPulse(
-                        this.controllerHandle, 
-                        Steamworks.ESteamControllerPad.k_ESteamControllerPad_Left, 
-                        ushort.MaxValue
-                    );
-                    yield return new WaitForSeconds(0.1f);
-                }
-            }
         }
 
         // =========================================================================================
