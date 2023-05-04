@@ -64,7 +64,9 @@ namespace Assets.Scripts {
             LOGGER.Log("Mod initialized");
         }
 
-        
+        // <summary>
+        //  Return the gameObject corresponding to the currently loaded Scene
+        // </summary>
         private GameObject SelectGameObject(object sender) {
             if( sender == null ) {
                 LOGGER.Log("No sender in event. Trying to use Game Loops..");
@@ -95,6 +97,8 @@ namespace Assets.Scripts {
             Assets.Scripts.Scenes.SceneManager manager = sender as Assets.Scripts.Scenes.SceneManager;
             return manager.gameObject;
         }
+
+        // =============================================================
 
         public void OnSceneLoading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
             LOGGER.Log("Scene loading");
