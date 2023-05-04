@@ -6,7 +6,9 @@ namespace Assets.Scripts {
         Flight,
         Designer,
         EVA,
-        Map
+        Map,
+        TechTree,
+        PlanetStudio
     }
 
     public static class SR2ActionSetsUtils {

@@ -176,6 +176,10 @@ namespace Assets.Scripts {
                 return SR2ActionSets.Flight;
             } else if( Game.InDesignerScene ) {
                 return SR2ActionSets.Designer;
+            } else if( Game.InTechTreeScene ) {
+                return SR2ActionSets.TechTree;
+            } else if( Game.InPlanetStudioScene ) {
+                return SR2ActionSets.PlanetStudio;
             }
             
             return SR2ActionSets.Menu;
