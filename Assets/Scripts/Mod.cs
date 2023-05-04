@@ -54,12 +54,9 @@ namespace Assets.Scripts {
             LOGGER.Log("SteamInput is initialized");
            
             Game.Instance.SceneManager.SceneLoaded += OnSceneLoaded;
-            Game.Instance.SceneManager.SceneLoading += OnSceneLoading;
-
-            Game.Instance.SceneManager.SceneUnloaded += OnSceneUnloaded;
             Game.Instance.SceneManager.SceneUnloading += OnSceneUnloading;
             this.OnSceneLoaded(null, null);
-            LOGGER.Log("OnSceneLoaded event set");
+            LOGGER.Log("Events binded");
             
             LOGGER.Log("Mod initialized");
         }
@@ -100,10 +97,6 @@ namespace Assets.Scripts {
 
         // =============================================================
 
-        public void OnSceneLoading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            LOGGER.Log("Scene loading");
-        }
-
         public void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
             LOGGER.Log("Scene loaded");
             GameObject gameObject = this.SelectGameObject(sender);
@@ -119,10 +112,6 @@ namespace Assets.Scripts {
             if( mod != null ) {
                 GameObject.Destroy(mod);
             }
-        }
-
-        public void OnSceneUnloaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            LOGGER.Log("Scene unloaded");
         }
     }
 }
