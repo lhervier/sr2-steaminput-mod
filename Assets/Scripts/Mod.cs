@@ -68,6 +68,7 @@ namespace Assets.Scripts {
             LOGGER.Log("In designer scene ? " + Game.InDesignerScene);
             LOGGER.Log("In flight scene ? " + Game.InFlightScene);
             LOGGER.Log("In planet studio scene ? " + Game.InPlanetStudioScene);
+            LOGGER.Log("In tech tree scene ? " + Game.InTechTreeScene);
             
             if( loop.Designer != null ) {
                 LOGGER.Log("Designer loop available");
