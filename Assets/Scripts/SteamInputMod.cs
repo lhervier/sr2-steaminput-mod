@@ -114,14 +114,6 @@ namespace Assets.Scripts {
         }
 
         // <summary>
-        //  Cancel an action set change
-        // </summary>
-        private void CancelActionSetChange() {
-            LOGGER.Log("Canceling previous action set change (if any)");
-            this.delayedActionDaemon.CancelDelayedAction(this._TriggerActionSetChange);
-        }
-
-        // <summary>
         //  Change action set NOW
         // </summary>
         public void ChangeActionSet(SR2ActionSets actionSet) {
@@ -192,7 +184,7 @@ namespace Assets.Scripts {
         // </summary>
         private void OnControllerDisconnected() {
             // Canceling eventual action set change
-            this.CancelActionSetChange();
+            this.delayedActionDaemon.CancelDelayedAction(this._TriggerActionSetChange);
 
             // Unhooks to KSP
             if( Game.InFlightScene ) {
