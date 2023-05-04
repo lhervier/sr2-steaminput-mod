@@ -53,38 +53,11 @@ namespace Assets.Scripts {
             LOGGER.Log("Delayed Actions Daemon attached");
             
             this.controllerDaemon = gameObject.AddComponent<ControllerDaemon>();
+            this.controllerDaemon.OnControllerConnected.Add(this.OnControllerConnected);
+            this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
             LOGGER.Log("Controller Daemon attached");
 
-            // Attach to controller Daemon
-            this.StartCoroutine(            
-                this.WaitForControllerDaemon(
-                    () => {
-                        // When a controller is already connected
-                        if( this.controllerDaemon.ControllerConnected ) {
-                            LOGGER.Log("Controller already connected. Running callbacks");
-                            this.OnControllerConnected();
-                        }
-
-                        this.controllerDaemon.OnControllerConnected.Add(this.OnControllerConnected);
-                        this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
-                        LOGGER.Log("Controller Events attached");
-                    }
-                )
-            );
             LOGGER.Log("Started");
-        }
-
-        // <summary>
-        //  Wait for the controller daemon to be available
-        // </summary>
-        // <param name="next">Action to execute once the daemon is ready</param>
-        private IEnumerator WaitForControllerDaemon(Action next) {
-            LOGGER.Log("Waiting for Controller Daemon");
-            while( !this.controllerDaemon.Started ) {
-                yield return null;
-            }
-            LOGGER.Log("Controller Daemon found");
-            next();
         }
 
         // <summary>
