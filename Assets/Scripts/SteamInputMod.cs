@@ -137,10 +137,7 @@ namespace Assets.Scripts {
         // </summary>
         public void ChangeActionSet(SR2ActionSets actionSet) {
             LOGGER.Log("Changing action set to " + actionSet);
-            this.CancelActionSetChange();
-            this._ChangeActionSet(actionSet);
-        }
-        private void _ChangeActionSet(SR2ActionSets actionSet) {
+            
             if( !this.controllerDaemon.ControllerConnected ) {
                 LOGGER.Log("No controller connected... Unable to change action set");
                 return;
@@ -150,6 +147,7 @@ namespace Assets.Scripts {
                 return;
             }
 
+            this.CancelActionSetChange();
             this.controllerDaemon.ChangeActionSet(actionSet);
             this.prevActionSet = actionSet;
         }
