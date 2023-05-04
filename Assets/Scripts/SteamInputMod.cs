@@ -109,20 +109,12 @@ namespace Assets.Scripts {
             this.delayedActionDaemon.TriggerDelayedAction(this._TriggerActionSetChange, DELAY);
         }
         private void _TriggerActionSetChange() {
-            SR2ActionSets actionSet = this.ComputeActionSet();
-            this.ChangeActionSet(actionSet);
-        }
-
-        // <summary>
-        //  Change action set NOW
-        // </summary>
-        public void ChangeActionSet(SR2ActionSets actionSet) {
-            LOGGER.Log("Changing action set to " + actionSet);
-            
             if( !this.controllerDaemon.ControllerConnected ) {
                 LOGGER.Log("No controller connected... Unable to change action set");
                 return;
             }
+            
+            SR2ActionSets actionSet = this.ComputeActionSet();
             if( actionSet.Equals(this.prevActionSet) ) {
                 LOGGER.Log("Action set " + actionSet + " is already set. Doing nothing...");
                 return;
