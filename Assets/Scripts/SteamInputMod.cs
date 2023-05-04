@@ -136,7 +136,6 @@ namespace Assets.Scripts {
                 return;
             }
 
-            this.CancelActionSetChange();
             this.controllerDaemon.ChangeActionSet(actionSet);
             this.prevActionSet = actionSet;
         }
