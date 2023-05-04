@@ -43,15 +43,6 @@ namespace Assets.Scripts {
         // ===============================================================================
 
         // <summary>
-        //  Make our plugin survive between scene loading
-        // </summary>
-        protected void Awake() {
-            LOGGER.Log("Awaking");
-            // DontDestroyOnLoad(this);
-            LOGGER.Log("Awaked");
-        }
-
-        // <summary>
         //  Start of the plugin
         // </summary>
         protected void Start() {
