@@ -4,7 +4,7 @@ using System;
 namespace Assets.Scripts {
 
     public class SteamInputLogger {
-        private string prefix = "[SteamInputPlugin]";
+        private string prefix = "[SteamInputMod]";
 
         public SteamInputLogger() {
         }
