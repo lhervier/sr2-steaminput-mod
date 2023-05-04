@@ -75,20 +75,6 @@ namespace Assets.Scripts {
         }
 
         // <summary>
-        //  Plugin destroyed
-        // </summary>
-        public void OnDestroy() {
-            LOGGER.Log("Destroying");
-            this.controllerDaemon.OnControllerDisconnected.Remove(this.OnControllerDisconnected);
-            this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
-            Destroy(this.delayedActionDaemon);
-            Destroy(this.controllerDaemon);
-            LOGGER.Log("Destroyed");
-        }
-
-        // ==========================================================================
-
-        // <summary>
         //  Wait for the controller daemon to be available
         // </summary>
         // <param name="next">Action to execute once the daemon is ready</param>
@@ -99,6 +85,18 @@ namespace Assets.Scripts {
             }
             LOGGER.Log("Controller Daemon found");
             next();
+        }
+
+        // <summary>
+        //  Plugin destroyed
+        // </summary>
+        public void OnDestroy() {
+            LOGGER.Log("Destroying");
+            this.controllerDaemon.OnControllerDisconnected.Remove(this.OnControllerDisconnected);
+            this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
+            Destroy(this.delayedActionDaemon);
+            Destroy(this.controllerDaemon);
+            LOGGER.Log("Destroyed");
         }
 
         // ====================================================================================
