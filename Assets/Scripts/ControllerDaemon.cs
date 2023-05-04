@@ -217,7 +217,6 @@ namespace Assets.Scripts {
                 return;
             }
 
-            LOGGER.Log("Activating action set " + actionSet);
             SteamInput.ActivateActionSet(
                 this.controllerHandle, 
                 this.actionsSetsHandles[actionSet]
