@@ -54,6 +54,9 @@ namespace Assets.Scripts {
             LOGGER.Log("SteamInput is initialized");
            
             Game.Instance.SceneManager.SceneLoaded += OnSceneLoaded;
+            Game.Instance.SceneManager.SceneLoading += OnSceneLoading;
+
+            Game.Instance.SceneManager.SceneUnloaded += OnSceneUnloaded;
             Game.Instance.SceneManager.SceneUnloading += OnSceneUnloading;
             this.OnSceneLoaded(null, null);
             LOGGER.Log("OnSceneLoaded event set");
@@ -62,49 +65,60 @@ namespace Assets.Scripts {
         }
 
         
-        private GameObject SelectGameObject() {
-            GameLoop.GameLoopRegistrar loop = Game.Loop;
-            LOGGER.Log("In menu scene ? " + Game.InMenuScene);
-            LOGGER.Log("In designer scene ? " + Game.InDesignerScene);
-            LOGGER.Log("In flight scene ? " + Game.InFlightScene);
-            LOGGER.Log("In planet studio scene ? " + Game.InPlanetStudioScene);
-            LOGGER.Log("In tech tree scene ? " + Game.InTechTreeScene);
-            
-            if( loop.Designer != null ) {
-                LOGGER.Log("Designer loop available");
-                LOGGER.Log("Designer loop game object available ? " + (loop.Designer.gameObject != null));
-            } else {
-                LOGGER.Log("No Designer loop available");
-            }
-            if( loop.Flight != null ) {
-                LOGGER.Log("Flight loop available");
-                LOGGER.Log("Flight loop game object available ? " + (loop.Flight.gameObject != null));
-            } else {
-                LOGGER.Log("No Flight loop available");
-            }
-            if( loop.Generic != null ) {
-                LOGGER.Log("Generic loop available");
-                LOGGER.Log("Generic loop game object available ? " + (loop.Generic.gameObject != null));
-            } else {
-                LOGGER.Log("No Generic loop available");
+        private GameObject SelectGameObject(object sender) {
+            if( sender == null ) {
+                LOGGER.Log("No sender in event. Trying to use Game Loops..");
+                GameLoop.GameLoopRegistrar loop = Game.Loop;
+                if( loop.Designer != null ) {
+                    LOGGER.Log("Designer loop available");
+                    return loop.Designer.gameObject;
+                } else {
+                    LOGGER.Log("No Designer loop available");
+                }
+                if( loop.Flight != null ) {
+                    LOGGER.Log("Flight loop available");
+                    return loop.Flight.gameObject;
+                } else {
+                    LOGGER.Log("No Flight loop available");
+                }
+                if( loop.Generic != null ) {
+                    LOGGER.Log("Generic loop available");
+                    return loop.Generic.gameObject;
+                } else {
+                    LOGGER.Log("No Generic loop available");
+                }
+                
+                LOGGER.Log("Unable to find GameLoop...");
+                return null;
             }
 
-            if( Game.InDesignerScene ) {
-                return loop.Designer.gameObject;
-            } else if( Game.InFlightScene ) {
-                return loop.Flight.gameObject;
-            } else {
-                return loop.Generic.gameObject;            // NPE !!!
-            }
+            Assets.Scripts.Scenes.SceneManager manager = sender as Assets.Scripts.Scenes.SceneManager;
+            return manager.gameObject;
+        }
+
+        public void OnSceneLoading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
+            LOGGER.Log("Scene loading");
         }
 
         public void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            GameObject gameObject = this.SelectGameObject();
-            mod = gameObject.AddComponent<SteamInputMod>();
+            LOGGER.Log("Scene loaded");
+            GameObject gameObject = this.SelectGameObject(sender);
+            if( gameObject != null ) {
+                mod = gameObject.AddComponent<SteamInputMod>();
+            } else {
+                mod = null;
+            }
         }
 
         public void OnSceneUnloading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            GameObject.Destroy(mod);
+            LOGGER.Log("Scene unloading");
+            if( mod != null ) {
+                GameObject.Destroy(mod);
+            }
+        }
+
+        public void OnSceneUnloaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
+            LOGGER.Log("Scene unloaded");
         }
     }
 }
