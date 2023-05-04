@@ -65,10 +65,14 @@ namespace Assets.Scripts {
         // </summary>
         public void OnDestroy() {
             LOGGER.Log("Destroying");
+            
+            this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
+            Destroy(this.delayedActionDaemon);
+            
             this.controllerDaemon.OnControllerDisconnected.Remove(this.OnControllerDisconnected);
             this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
-            Destroy(this.delayedActionDaemon);
             Destroy(this.controllerDaemon);
+            
             LOGGER.Log("Destroyed");
         }
 
@@ -89,6 +93,7 @@ namespace Assets.Scripts {
         // Change the action set
         // </summary>
         private void ChangeActionSet() {
+            LOGGER.Log("Changing action set");
             if( !this.controllerDaemon.ControllerConnected ) {
                 LOGGER.Log("No controller connected... Unable to change action set");
                 return;
