@@ -1,5 +1,5 @@
 {
-    "name": "JunoMod",
+    "name": "SteamInputMod",
     "rootNamespace": "",
     "references": [
         "UnityEngine.UI",

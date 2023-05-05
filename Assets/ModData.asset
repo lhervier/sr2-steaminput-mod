@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _assemblies:
   - com.rlabrecque.steamworks.net.dll
-  - JunoMod.dll
+  - SteamInputMod.dll
   _author: Lionel HERVIER
   _description: 
   _loadPriority: 1000
-  _name: JunoMod
+  _name: SteamInputMod
   _otherAssets: []
   _prefabs: []
   _steamDescription: 

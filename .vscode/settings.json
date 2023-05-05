@@ -1,4 +1,4 @@
 {
     "omnisharp.useModernNet": false,
-    "explorer.excludeGitIgnore": true
+    "explorer.excludeGitIgnore": false
 }
