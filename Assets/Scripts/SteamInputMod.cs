@@ -43,6 +43,15 @@ namespace Assets.Scripts {
         // ===============================================================================
 
         // <summary>
+        //  Component awaked
+        // </summary>
+        protected void Awake() {
+            LOGGER.Debug("Awaking");
+            DontDestroyOnLoad(this);
+            LOGGER.Debug("Awaked");
+        }
+
+        // <summary>
         //  Start of the plugin
         // </summary>
         protected void Start() {

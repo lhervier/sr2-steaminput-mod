@@ -45,7 +45,7 @@ namespace Assets.Scripts {
         // </summary>
         public void Awake() {
             LOGGER.Debug("Awaking");
-            // DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this);
             LOGGER.Debug("Awaked");
         }
 

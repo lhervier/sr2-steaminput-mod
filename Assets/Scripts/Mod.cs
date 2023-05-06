@@ -44,10 +44,7 @@ namespace Assets.Scripts {
         protected override void OnModInitialized() {
             base.OnModInitialized();
             LOGGER.Debug("Initializing Mod");
-
-            // Black magic to get a gameObject that survives scene loading/unloading
-            Assets.Scripts.Scenes.SceneManager manager = Game.Instance.SceneManager as Assets.Scripts.Scenes.SceneManager;
-            mod = manager.gameObject.AddComponent<SteamInputMod>();
+            mod = new GameObject("SteamInputMod").AddComponent<SteamInputMod>();
 
             LOGGER.Debug("Mod initialized");
         }

@@ -80,7 +80,7 @@ namespace Assets.Scripts {
         // </summary>
         public void Awake() {
             LOGGER.Debug("Awaking");
-            // DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this);
             
             this.OnControllerConnected = new ControllerEvent("controller.OnConnected");
             this.OnControllerDisconnected = new ControllerEvent("controller.OnDisconnected");
