@@ -79,7 +79,7 @@ namespace Assets.Scripts {
         //  Component awaken
         // </summary>
         public void Awake() {
-            LOGGER.Log("Awaking");
+            LOGGER.Debug("Awaking");
             // DontDestroyOnLoad(this);
             
             this.OnControllerConnected = new ControllerEvent("controller.OnConnected");
@@ -88,29 +88,29 @@ namespace Assets.Scripts {
             
             Instance = this;
             
-            LOGGER.Log("Awaked");
+            LOGGER.Debug("Awaked");
         }
 
         // <summary>
         //  Startup of the component
         // </summary>
         public void Start() {
-            LOGGER.Log("Starting");
+            LOGGER.Debug("Starting");
             this.checkForControllerCoroutine = this.CheckForController();
             this.StartCoroutine(this.checkForControllerCoroutine);
             this.Started = true;
-            LOGGER.Log("Started");
+            LOGGER.Debug("Started");
         }
 
         // <summary>
         //  Component destroyed
         // </summary>
         public void OnDestroy() {
-            LOGGER.Log("Destroying");
+            LOGGER.Debug("Destroying");
             Instance = null;
             this.StopCoroutine(this.checkForControllerCoroutine);
             this.Started = false;
-            LOGGER.Log("Destroyed");
+            LOGGER.Debug("Destroyed");
         }
 
         
@@ -155,7 +155,7 @@ namespace Assets.Scripts {
 
                 // Disconnect the current controller
                 if( disconnectedController ) {
-                    LOGGER.Log("Controller disconnected");
+                    LOGGER.Info("Controller disconnected");
                     this.ControllerConnected = false;
                     this.UnloadActionSets();
                     this.OnControllerDisconnected.Fire();
@@ -163,7 +163,7 @@ namespace Assets.Scripts {
 
                 // Connects a new controller
                 if( newController ) {
-                    LOGGER.Log("Controller connected");
+                    LOGGER.Info("Controller connected");
                     this.controllerHandle = this._controllerHandles[0];
                     this.ControllerConnected = true;
                     this.LoadActionSets();
@@ -180,18 +180,18 @@ namespace Assets.Scripts {
         //  It seems to load the action sets of the first controller.
         // </summary>
         private void LoadActionSets() {
-            LOGGER.Log("Loading Action Sets Handles");
+            LOGGER.Debug("Loading Action Sets Handles");
             InputActionSetHandle_t ash = SteamInput.GetCurrentActionSet(this.controllerHandle);
             foreach(SR2ActionSets actionSet in Enum.GetValues(typeof(SR2ActionSets))) {
                 string actionSetName = actionSet.GetId();
                 if( actionSetName == "NotSetControls" ) {
                     continue;
                 }
-                LOGGER.Log("- Getting action set handle for " + actionSetName);
+                LOGGER.Debug("- Getting action set handle for " + actionSetName);
                 // Action Sets list should depend on the used controller. But that's not what the API is waiting for...
                 InputActionSetHandle_t actionSetHandle = SteamInput.GetActionSetHandle(actionSetName);
                 if( actionSetHandle.m_InputActionSetHandle == 0L ) {
-                    LOGGER.Log("ERROR : Action set handle for " + actionSetName + " not found. I will use the default action set instead");
+                    LOGGER.Debug("ERROR : Action set handle for " + actionSetName + " not found. I will use the default action set instead");
                 }
                 this.actionsSetsHandles[actionSet] = actionSetHandle;
             }
@@ -211,9 +211,9 @@ namespace Assets.Scripts {
         //  Change the current action set
         // </summary>
         public void ChangeActionSet(SR2ActionSets actionSet) {
-            LOGGER.Log("Changing Action Set to " + actionSet);
+            LOGGER.Info("Changing Action Set to " + actionSet);
             if( !this.ControllerConnected ) {
-                LOGGER.Log("No controller connected. Nothing to change...");
+                LOGGER.Warn("No controller connected. Nothing to change...");
                 return;
             }
 

@@ -44,31 +44,32 @@ namespace Assets.Scripts {
         //  Component awaked
         // </summary>
         public void Awake() {
-            LOGGER.Log("Awaking");
+            LOGGER.Debug("Awaking");
             // DontDestroyOnLoad(this);
-            LOGGER.Log("Awaked");
+            LOGGER.Debug("Awaked");
         }
 
         // <summary>
         //  Startup of the component
         // </summary>
         public void Start() {
+            LOGGER.Debug("Starting");
             this.initialized = true;
-            LOGGER.Log("Started");
+            LOGGER.Debug("Started");
         }
 
         // <summary>
         //  Component destroyed
         // </summary>
         public void OnDestroy() {
-            LOGGER.Log("Destroying");
+            LOGGER.Debug("Destroying");
             foreach( Coroutine cr in this.coroutines.Values ) {
                 this.StopCoroutine(cr);
             }
             this.coroutines.Clear();
             this.actionThreshold.Clear();
             this.initialized = false;
-            LOGGER.Log("Destroyed");
+            LOGGER.Debug("Destroyed");
         }
 
         // ===============================================================

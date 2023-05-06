@@ -22,7 +22,7 @@ namespace Assets.Scripts {
         }
 
         public void Fire() {
-            this.LOGGER.Log("Firing event (" + this.actions.Count + " events)");
+            this.LOGGER.Debug("Firing event (" + this.actions.Count + " events)");
             foreach( Action action in this.actions ) {
                 action();
             }

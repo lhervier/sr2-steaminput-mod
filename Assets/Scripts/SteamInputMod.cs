@@ -46,25 +46,25 @@ namespace Assets.Scripts {
         //  Start of the plugin
         // </summary>
         protected void Start() {
-            LOGGER.Log("Starting");
+            LOGGER.Debug("Starting");
             
             // Attach to delayed action daemon
             this.delayedActionDaemon = gameObject.AddComponent<DelayedActionDaemon>();
-            LOGGER.Log("Delayed Actions Daemon attached");
+            LOGGER.Debug("Delayed Actions Daemon attached");
             
             this.controllerDaemon = gameObject.AddComponent<ControllerDaemon>();
             this.controllerDaemon.OnControllerConnected.Add(this.OnControllerConnected);
             this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
-            LOGGER.Log("Controller Daemon attached");
+            LOGGER.Debug("Controller Daemon attached");
 
-            LOGGER.Log("Started");
+            LOGGER.Debug("Started");
         }
 
         // <summary>
         //  Plugin destroyed
         // </summary>
         public void OnDestroy() {
-            LOGGER.Log("Destroying");
+            LOGGER.Debug("Destroying");
             
             this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
             Destroy(this.delayedActionDaemon);
@@ -73,7 +73,7 @@ namespace Assets.Scripts {
             this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
             Destroy(this.controllerDaemon);
             
-            LOGGER.Log("Destroyed");
+            LOGGER.Debug("Destroyed");
         }
 
         // ====================================================================================
@@ -82,7 +82,7 @@ namespace Assets.Scripts {
         //  Trigger an action set change
         // </summary>
         public void TriggerActionSetChange() {
-            LOGGER.Log("Triggering action set change in " + DELAY +" frames");
+            LOGGER.Debug("Triggering action set change in " + DELAY +" frames");
             this.delayedActionDaemon.TriggerDelayedAction(
                 this.ChangeActionSet, 
                 DELAY
@@ -93,15 +93,15 @@ namespace Assets.Scripts {
         // Change the action set
         // </summary>
         private void ChangeActionSet() {
-            LOGGER.Log("Changing action set");
+            LOGGER.Debug("Changing action set");
             if( !this.controllerDaemon.ControllerConnected ) {
-                LOGGER.Log("No controller connected... Unable to change action set");
+                LOGGER.Warn("No controller connected... Unable to change action set");
                 return;
             }
             
             SR2ActionSets actionSet = this.ComputeActionSet();
             if( actionSet.Equals(this.prevActionSet) ) {
-                LOGGER.Log("Action set " + actionSet + " is already set. Doing nothing...");
+                LOGGER.Debug("Action set " + actionSet + " is already set. Doing nothing...");
                 return;
             }
 
@@ -144,13 +144,13 @@ namespace Assets.Scripts {
         //  New controller connected
         // </summary>
         private void OnControllerConnected() {
-            LOGGER.Log("New controller connected");
+            LOGGER.Debug("New controller connected");
             
             if( Game.InFlightScene ) {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged += this.OnForegroundMapViewStateChanged;
                 Game.Instance.FlightScene.CraftChanged += this.OnCraftChanged;
             }
-            LOGGER.Log("DR2 hooks created");
+            LOGGER.Debug("DR2 hooks created");
 
             // Trigger an action set change to load the right action set
             this.TriggerActionSetChange();
@@ -168,7 +168,7 @@ namespace Assets.Scripts {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged -= OnForegroundMapViewStateChanged;
                 Game.Instance.FlightScene.CraftChanged -= this.OnCraftChanged;
             }
-            LOGGER.Log("SR2 hooks removed");
+            LOGGER.Debug("SR2 hooks removed");
         }
 
         // ========================================================================================

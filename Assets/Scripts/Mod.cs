@@ -42,23 +42,23 @@ namespace Assets.Scripts {
         // </summary>
         protected override void OnModInitialized() {
             base.OnModInitialized();
-            LOGGER.Log("Initializing Mod");
+            LOGGER.Debug("Initializing Mod");
 
             if( !SteamManager.Initialized ) {
-                LOGGER.Log("Steam not detected. Unable to start the mod.");
+                LOGGER.Fatal("Steam not detected. Unable to start the mod.");
                 return;
             }
-            LOGGER.Log("Steam is initialized");
+            LOGGER.Debug("Steam is initialized");
 
             SteamInput.Init(false);
-            LOGGER.Log("SteamInput is initialized");
+            LOGGER.Debug("SteamInput is initialized");
            
             Game.Instance.SceneManager.SceneLoaded += OnSceneLoaded;
             Game.Instance.SceneManager.SceneUnloading += OnSceneUnloading;
             this.OnSceneLoaded(null, null);
-            LOGGER.Log("Events binded");
+            LOGGER.Debug("Events binded");
             
-            LOGGER.Log("Mod initialized");
+            LOGGER.Debug("Mod initialized");
         }
 
         // <summary>
@@ -66,28 +66,28 @@ namespace Assets.Scripts {
         // </summary>
         private GameObject SelectGameObject(object sender) {
             if( sender == null ) {
-                LOGGER.Log("No sender in event. Trying to use Game Loops..");
+                LOGGER.Debug("No sender in event. Trying to use Game Loops..");
                 GameLoop.GameLoopRegistrar loop = Game.Loop;
                 if( loop.Designer != null ) {
-                    LOGGER.Log("Designer loop available");
+                    LOGGER.Debug("Designer loop available");
                     return loop.Designer.gameObject;
                 } else {
-                    LOGGER.Log("No Designer loop available");
+                    LOGGER.Debug("No Designer loop available");
                 }
                 if( loop.Flight != null ) {
-                    LOGGER.Log("Flight loop available");
+                    LOGGER.Debug("Flight loop available");
                     return loop.Flight.gameObject;
                 } else {
-                    LOGGER.Log("No Flight loop available");
+                    LOGGER.Debug("No Flight loop available");
                 }
                 if( loop.Generic != null ) {
-                    LOGGER.Log("Generic loop available");
+                    LOGGER.Debug("Generic loop available");
                     return loop.Generic.gameObject;
                 } else {
-                    LOGGER.Log("No Generic loop available");
+                    LOGGER.Debug("No Generic loop available");
                 }
                 
-                LOGGER.Log("Unable to find GameLoop...");
+                LOGGER.Error("Unable to find GameLoop...");
                 return null;
             }
 
@@ -98,7 +98,7 @@ namespace Assets.Scripts {
         // =============================================================
 
         public void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            LOGGER.Log("Scene loaded");
+            LOGGER.Debug("Scene loaded");
             GameObject gameObject = this.SelectGameObject(sender);
             if( gameObject != null ) {
                 mod = gameObject.AddComponent<SteamInputMod>();
@@ -108,7 +108,7 @@ namespace Assets.Scripts {
         }
 
         public void OnSceneUnloading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            LOGGER.Log("Scene unloading");
+            LOGGER.Debug("Scene unloading");
             if( mod != null ) {
                 GameObject.Destroy(mod);
             }
