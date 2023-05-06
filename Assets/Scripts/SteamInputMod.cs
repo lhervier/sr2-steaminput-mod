@@ -48,6 +48,15 @@ namespace Assets.Scripts {
         protected void Start() {
             LOGGER.Debug("Starting");
             
+            if( !SteamManager.Initialized ) {
+                LOGGER.Fatal("Steam not detected. Unable to start the mod.");
+                return;
+            }
+            LOGGER.Debug("Steam is initialized");
+
+            SteamInput.Init(false);
+            LOGGER.Debug("SteamInput is initialized");
+
             // Attach to delayed action daemon
             this.delayedActionDaemon = gameObject.AddComponent<DelayedActionDaemon>();
             LOGGER.Debug("Delayed Actions Daemon attached");
@@ -56,6 +65,10 @@ namespace Assets.Scripts {
             this.controllerDaemon.OnControllerConnected.Add(this.OnControllerConnected);
             this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
             LOGGER.Debug("Controller Daemon attached");
+
+            Game.Instance.SceneManager.SceneLoaded += OnSceneLoaded;
+            Game.Instance.SceneManager.SceneUnloading += OnSceneUnloading;
+            LOGGER.Debug("SR2 Events attached");
 
             LOGGER.Debug("Started");
         }
@@ -68,27 +81,22 @@ namespace Assets.Scripts {
             
             this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
             Destroy(this.delayedActionDaemon);
+            LOGGER.Debug("Delayed Actions Dameon detached");
             
             this.controllerDaemon.OnControllerDisconnected.Remove(this.OnControllerDisconnected);
             this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
             Destroy(this.controllerDaemon);
+            LOGGER.Debug("Controller Daemon detached");
             
+            Game.Instance.SceneManager.SceneLoaded -= OnSceneLoaded;
+            Game.Instance.SceneManager.SceneUnloading -= OnSceneUnloading;
+            LOGGER.Debug("SR2 Events dettached");
+
             LOGGER.Debug("Destroyed");
         }
 
         // ====================================================================================
 
-        // <summary>
-        //  Trigger an action set change
-        // </summary>
-        public void TriggerActionSetChange() {
-            LOGGER.Debug("Triggering action set change in " + DELAY +" frames");
-            this.delayedActionDaemon.TriggerDelayedAction(
-                this.ChangeActionSet, 
-                DELAY
-            );
-        }
-        
         // <summary>
         // Change the action set
         // </summary>
@@ -113,7 +121,15 @@ namespace Assets.Scripts {
         //  Compute the action set to use, depending on the context
         // </summary>
         private EActionSets ComputeActionSet() {
-            if( Game.InFlightScene ) {
+            if( Game.Instance.UserInterface.AnyDialogsOpen ) {
+                return EActionSets.Menu;
+            } else if( Game.InDesignerScene ) {
+                return EActionSets.Designer;
+            } else if( Game.InTechTreeScene ) {
+                return EActionSets.TechTree;
+            } else if( Game.InPlanetStudioScene ) {
+                return EActionSets.PlanetStudio;
+            } else if( Game.InFlightScene ) {
                 if( Game.Instance.FlightScene.ViewManager.MapViewManager.IsInForeground ) {
                     return EActionSets.Map;
                 }
@@ -125,12 +141,6 @@ namespace Assets.Scripts {
                 }
                 
                 return EActionSets.Flight;
-            } else if( Game.InDesignerScene ) {
-                return EActionSets.Designer;
-            } else if( Game.InTechTreeScene ) {
-                return EActionSets.TechTree;
-            } else if( Game.InPlanetStudioScene ) {
-                return EActionSets.PlanetStudio;
             }
             
             return EActionSets.Menu;
@@ -144,43 +154,64 @@ namespace Assets.Scripts {
         //  New controller connected
         // </summary>
         private void OnControllerConnected() {
-            LOGGER.Debug("New controller connected");
-            
-            if( Game.InFlightScene ) {
-                Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged += this.OnForegroundMapViewStateChanged;
-                Game.Instance.FlightScene.CraftChanged += this.OnCraftChanged;
-            }
-            LOGGER.Debug("DR2 hooks created");
-
-            // Trigger an action set change to load the right action set
-            this.TriggerActionSetChange();
+            LOGGER.Debug("Controller connected");
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
         }
 
         // <summary>
         //  Controller disconnected
         // </summary>
         private void OnControllerDisconnected() {
-            // Canceling eventual action set change
+            LOGGER.Debug("Controller disconnected");
             this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
-
-            // Unhooks to KSP
-            if( Game.InFlightScene ) {
-                Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged -= OnForegroundMapViewStateChanged;
-                Game.Instance.FlightScene.CraftChanged -= this.OnCraftChanged;
-            }
-            LOGGER.Debug("SR2 hooks removed");
         }
 
         // ========================================================================================
         //                                      SR2 Events
         // ========================================================================================
 
+        public void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
+            Game.Instance.UserInterface.AnyDialogsOpenChanged += this.OnAnyDialogsOpenChanged;
+            if( Game.InFlightScene ) {
+                Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged += this.OnForegroundMapViewStateChanged;
+                Game.Instance.FlightScene.CraftChanged += this.OnCraftChanged;
+            }
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
+        }
+
+        public void OnSceneUnloading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
+            if( Game.InFlightScene ) {
+                Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged -= this.OnForegroundMapViewStateChanged;
+                Game.Instance.FlightScene.CraftChanged -= this.OnCraftChanged;
+            }
+            Game.Instance.UserInterface.AnyDialogsOpenChanged -= this.OnAnyDialogsOpenChanged;
+        }
+
         public void OnForegroundMapViewStateChanged(bool foreground) {
-            this.TriggerActionSetChange();
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
         }
 
         public void OnCraftChanged(ICraftNode craftNode) {
-            this.TriggerActionSetChange();
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
+        }
+
+        public void OnAnyDialogsOpenChanged(bool inDialog) {
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
         }
     }
 }
