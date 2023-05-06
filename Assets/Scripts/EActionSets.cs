@@ -1,6 +1,6 @@
 namespace Assets.Scripts {
 
-    public enum SR2ActionSets {
+    public enum EActionSets {
         NotSet,
         Menu,
         Flight,
@@ -11,12 +11,12 @@ namespace Assets.Scripts {
         PlanetStudio
     }
 
-    public static class SR2ActionSetsUtils {
-        public static string GetLabel(this SR2ActionSets kac) {
+    public static class EActionSetsUtils {
+        public static string GetLabel(this EActionSets kac) {
             return kac.ToString() + " Controls";
         }
 
-        public static string GetId(this SR2ActionSets kac) {
+        public static string GetId(this EActionSets kac) {
             return kac.ToString() + "Controls";
         }
     }

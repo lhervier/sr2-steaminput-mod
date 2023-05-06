@@ -26,7 +26,7 @@ namespace Assets.Scripts {
         // <summary>
         //  Previous action set (so we don't display the message when the value has not changed)
         // </summary>
-        private SR2ActionSets prevActionSet = SR2ActionSets.NotSet;
+        private EActionSets prevActionSet = EActionSets.NotSet;
 
         // <summary>
         //  Connection Daemon to the controllers
@@ -99,7 +99,7 @@ namespace Assets.Scripts {
                 return;
             }
             
-            SR2ActionSets actionSet = this.ComputeActionSet();
+            EActionSets actionSet = this.ComputeActionSet();
             if( actionSet.Equals(this.prevActionSet) ) {
                 LOGGER.Debug("Action set " + actionSet + " is already set. Doing nothing...");
                 return;
@@ -112,28 +112,28 @@ namespace Assets.Scripts {
         // <summary>
         //  Compute the action set to use, depending on the context
         // </summary>
-        private SR2ActionSets ComputeActionSet() {
+        private EActionSets ComputeActionSet() {
             if( Game.InFlightScene ) {
                 if( Game.Instance.FlightScene.ViewManager.MapViewManager.IsInForeground ) {
-                    return SR2ActionSets.Map;
+                    return EActionSets.Map;
                 }
 
                 foreach( ICommandPod pod in Game.Instance.FlightScene.CraftNode.CraftScript.CommandPods ) {
                     if( pod.EvaScript != null && pod.EvaScript.EvaActive ) {
-                        return SR2ActionSets.EVA;
+                        return EActionSets.EVA;
                     }
                 }
                 
-                return SR2ActionSets.Flight;
+                return EActionSets.Flight;
             } else if( Game.InDesignerScene ) {
-                return SR2ActionSets.Designer;
+                return EActionSets.Designer;
             } else if( Game.InTechTreeScene ) {
-                return SR2ActionSets.TechTree;
+                return EActionSets.TechTree;
             } else if( Game.InPlanetStudioScene ) {
-                return SR2ActionSets.PlanetStudio;
+                return EActionSets.PlanetStudio;
             }
             
-            return SR2ActionSets.Menu;
+            return EActionSets.Menu;
         }
         
         // ==============================================================================

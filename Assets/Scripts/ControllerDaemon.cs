@@ -56,7 +56,7 @@ namespace Assets.Scripts {
         // <summary>
         //  The action sets handles defined in the controller configuration template
         // </summary>
-        private IDictionary<SR2ActionSets, InputActionSetHandle_t> actionsSetsHandles = new Dictionary<SR2ActionSets, InputActionSetHandle_t>();
+        private IDictionary<EActionSets, InputActionSetHandle_t> actionsSetsHandles = new Dictionary<EActionSets, InputActionSetHandle_t>();
 
         // <summary>
         //  Handles to the connected controllers.
@@ -182,7 +182,7 @@ namespace Assets.Scripts {
         private void LoadActionSets() {
             LOGGER.Debug("Loading Action Sets Handles");
             InputActionSetHandle_t ash = SteamInput.GetCurrentActionSet(this.controllerHandle);
-            foreach(SR2ActionSets actionSet in Enum.GetValues(typeof(SR2ActionSets))) {
+            foreach(EActionSets actionSet in Enum.GetValues(typeof(EActionSets))) {
                 string actionSetName = actionSet.GetId();
                 if( actionSetName == "NotSetControls" ) {
                     continue;
@@ -210,7 +210,7 @@ namespace Assets.Scripts {
         // <summary>
         //  Change the current action set
         // </summary>
-        public void ChangeActionSet(SR2ActionSets actionSet) {
+        public void ChangeActionSet(EActionSets actionSet) {
             LOGGER.Info("Changing Action Set to " + actionSet);
             if( !this.ControllerConnected ) {
                 LOGGER.Warn("No controller connected. Nothing to change...");
