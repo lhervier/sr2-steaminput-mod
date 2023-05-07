@@ -14,9 +14,6 @@
 	"minor_revision"	"0"
 	"Timestamp"			"1683370137"
 	
-	"action_layers"
-	{
-	}
 	"localization"
 	{
 		"english"
@@ -26,10 +23,11 @@
 		}
 	}
 
-	// ==========================
-	//  Action Groups definition
-	// ==========================
+	// =====================
+	//  Presets definitions
+	// =====================
 
+	// Action Sets
 	"actions"
 	{
 		"MenuControls"
@@ -68,7 +66,19 @@
 			"legacy_set"	"1"
 		}
 	}
-
+	
+	// Action Layers
+	"action_layers"
+	{
+		"DesignerControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"DesignerControls"
+		}
+	}
+	
 	// Menu Action Set
 	"preset"
 	{
@@ -100,6 +110,17 @@
 			"62"	"joystick active"
 			"63"	"left_trigger active"
 			"64"	"right_trigger active"
+		}
+	}
+
+	// Designer Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"7"
+		"name"		"DesignerControlsRightPad"
+		"group_source_bindings"
+		{
+			"107"		"switch active"
 		}
 	}
 
@@ -187,7 +208,7 @@
 			"101"	"right_trigger active"
 		}
 	}
-	
+
 	// =======================================
 	//  Group definitions for Menu Action Set 
 	// =======================================
@@ -667,7 +688,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SEMICOLON, , "
+							"binding"		"key_press ESCAPE, , "
 						}
 					}
 				}
@@ -683,7 +704,8 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, , "
+							"binding"		"key_press LEFT_CONTROL, , "
+							"binding"		"key_press W, , "
 						}
 					}
 				}
@@ -747,7 +769,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"controller_action hold_layer 8 0 0, , "
 						}
 					}
 				}
@@ -1126,6 +1148,43 @@
 		}
 	}
 
+	// =================================================================
+	//  Group definitions for Designer Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Switch
+	"group"
+	{
+		"id"		"107"
+		"mode"		"switches"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, , "
+							"binding"		"key_press Y, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	
 	// ===========================================
 	//  Group definitions for Flight Action Set 
 	// ===========================================
