@@ -121,6 +121,7 @@
 		"group_source_bindings"
 		{
 			"107"		"switch active"
+			"108"		"right_trackpad active"
 		}
 	}
 
@@ -1185,6 +1186,42 @@
 		}
 	}
 	
+	// Right Trackpad
+	"group"
+	{
+		"id"		"108"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
 	// ===========================================
 	//  Group definitions for Flight Action Set 
 	// ===========================================
