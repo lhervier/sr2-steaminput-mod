@@ -77,6 +77,41 @@
 			"set_layer"			"1"
 			"parent_set_name"	"DesignerControls"
 		}
+		"FlightControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"FlightControls"
+		}
+		"MapControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"MapControls"
+		}
+		"EVAControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"EVAControls"
+		}
+		"TechTreeControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"TechTreeControls"
+		}
+		"PlanetStudioControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"PlanetStudioControls"
+		}
 	}
 	
 	// Menu Action Set
@@ -142,6 +177,17 @@
 		}
 	}
 
+	// Flight Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"8"
+		"name"		"FlightControlsRightPad"
+		"group_source_bindings"
+		{
+			"110"		"right_trackpad active"
+		}
+	}
+
 	// Map Action Set
 	"preset"
 	{
@@ -156,6 +202,17 @@
 			"76"	"joystick active"
 			"77"	"left_trigger active"
 			"78"	"right_trigger active"
+		}
+	}
+
+	// Map Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"9"
+		"name"		"MapControlsRightPad"
+		"group_source_bindings"
+		{
+			"112"		"right_trackpad active"
 		}
 	}
 
@@ -176,6 +233,17 @@
 		}
 	}
 
+	// EVA Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"10"
+		"name"		"EVAControlsRightPad"
+		"group_source_bindings"
+		{
+			"114"		"right_trackpad active"
+		}
+	}
+
 	// Tech Tree Action Set
 	"preset"
 	{
@@ -193,6 +261,17 @@
 		}
 	}
 
+	// Tech Tree Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"11"
+		"name"		"TechTreeControlsRightPad"
+		"group_source_bindings"
+		{
+			"116"		"right_trackpad active"
+		}
+	}
+
 	// Planet Studio Action Set
 	"preset"
 	{
@@ -207,6 +286,17 @@
 			"99"	"joystick active"
 			"100"	"left_trigger active"
 			"101"	"right_trigger active"
+		}
+	}
+
+	// Planet Studio Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"12"
+		"name"		"PlanetStudioControlsRightPad"
+		"group_source_bindings"
+		{
+			"118"		"right_trackpad active"
 		}
 	}
 
@@ -1323,7 +1413,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"controller_action hold_layer 9 0 0, , "
 						}
 					}
 				}
@@ -1702,6 +1792,46 @@
 		}
 	}
 
+	// =================================================================
+	//  Group definitions for Flight Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"110"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
 	// ===========================================
 	//  Group definitions for Map Action Set 
 	// ===========================================
@@ -1803,7 +1933,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"controller_action hold_layer 10 0 0, , "
 						}
 					}
 				}
@@ -2182,6 +2312,46 @@
 		}
 	}
 
+	// =================================================================
+	//  Group definitions for Map Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"112"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
 	// ===========================================
 	//  Group definitions for EVA Action Set 
 	// ===========================================
@@ -2283,7 +2453,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"controller_action hold_layer 11 0 0, , "
 						}
 					}
 				}
@@ -2662,6 +2832,46 @@
 		}
 	}
 
+	// =================================================================
+	//  Group definitions for EVA Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"114"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
 	// ===========================================
 	//  Group definitions for Tech Tree Action Set 
 	// ===========================================
@@ -2763,7 +2973,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"controller_action hold_layer 12 0 0, , "
 						}
 					}
 				}
@@ -3142,6 +3352,46 @@
 		}
 	}
 
+	// =================================================================
+	//  Group definitions for Tech Tree Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"116"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
 	// ===========================================
 	//  Group definitions for Planet Studio Action Set 
 	// ===========================================
@@ -3243,7 +3493,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"controller_action hold_layer 13 0 0, , "
 						}
 					}
 				}
@@ -3619,6 +3869,46 @@
 		"settings"
 		{
 			"output_trigger"		"2"
+		}
+	}
+
+	// =================================================================
+	//  Group definitions for Planet Studio Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"118"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
 		}
 	}
 
