@@ -780,7 +780,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, , "
+							"binding"		"key_press ESCAPE, Show Menu, "
 						}
 					}
 				}
@@ -796,8 +796,8 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_CONTROL, , "
-							"binding"		"key_press W, , "
+							"binding"		"key_press LEFT_CONTROL, Undo, "
+							"binding"		"key_press W, Undo, "
 						}
 					}
 				}
@@ -813,7 +813,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Q, , "
+							"binding"		"key_press A, Rotate Part Z-, "
 						}
 					}
 				}
@@ -829,7 +829,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, , "
+							"binding"		"key_press E, Rotate Part Z+, "
 						}
 					}
 				}
@@ -957,7 +957,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press TAB, , "
+							"binding"		"key_press TAB, Deselect Part, "
 						}
 					}
 				}
