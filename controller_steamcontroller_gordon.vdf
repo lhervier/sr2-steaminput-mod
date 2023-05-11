@@ -957,7 +957,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press B, , "
+							"binding"		"key_press TAB, , "
 						}
 					}
 				}
