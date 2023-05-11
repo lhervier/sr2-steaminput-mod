@@ -42,6 +42,11 @@ namespace Assets.Scripts
         public EnumSetting<ELogLevel> LogLevel { get; private set; }
 
         /// <summary>
+        /// Display message on action set change
+        /// </summary>
+        public BoolSetting DisplayMessageOnActionSetChange { get; private set; }
+
+        /// <summary>
         /// Initializes the settings in the category.
         /// </summary>
         protected override void InitializeSettings()
@@ -49,6 +54,9 @@ namespace Assets.Scripts
             this.LogLevel = this.CreateEnum<ELogLevel>("Log Level")
                .SetDescription("Change the Log Level of the mod. Logs can be found in C:\\Users\\<user>\\AppData\\LocalLow\\Jundroo\\SimpleRockets 2\\Player.log")
                .SetDefault(ELogLevel.WARN);
+            this.DisplayMessageOnActionSetChange = this.CreateBool("Display Message")           
+                .SetDescription("Display a message on action set change")
+                .SetDefault(false);
         }
     }
 }
