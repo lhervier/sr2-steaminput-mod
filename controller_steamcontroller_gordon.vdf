@@ -156,6 +156,7 @@
 		"group_source_bindings"
 		{
 			"107"		"switch active"
+			"113"		"joystick active"
 			"109"		"left_trigger active"
 			"111"		"right_trigger active"
 		}
@@ -1069,12 +1070,12 @@
 	"group"
 	{
 		"id"		"62"
-		"mode"		"joystick_move"
+		"mode"		"dpad"
 		"name"		""
 		"description"		""
 		"inputs"
 		{
-			"click"
+			"dpad_north"
 			{
 				"activators"
 				{
@@ -1082,11 +1083,55 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button JOYSTICK_LEFT, , "
+							"binding"		"key_press Z, Rotate Part X+, #232323 #E4E4E4"
 						}
-						"settings"
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
 						{
-							"haptic_intensity"		"2"
+							"binding"		"key_press S, Rotate Part X-, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press D, Rotate Part Y+, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Q, Rotate Part Y-, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -1097,7 +1142,7 @@
 		}
 		"settings"
 		{
-			"deadzone_inner_radius"		"7199"
+			"requires_click"		"0"
 		}
 	}
 
@@ -1186,8 +1231,42 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_CONTROL, , "
-							"binding"		"key_press Y, , "
+							"binding"		"key_press LEFT_CONTROL, Redo, "
+							"binding"		"key_press Y, Redo, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_SHIFT, Nudge Part Z-, "
+							"binding"		"key_press A, Nudge Part Z-, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_SHIFT, Nudge Part Z+, "
+							"binding"		"key_press E, Nudge Part Z+, "
 						}
 					}
 				}
@@ -1199,6 +1278,90 @@
 		"settings"
 		{
 			"layer"		"1"
+		}
+	}
+
+	// Joystick
+	"group"
+	{
+		"id"		"113"
+		"mode"		"dpad"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_SHIFT, Nudge Part X+, #232323 #E4E4E4"
+							"binding"		"key_press Z, Nudge Part X+, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_SHIFT, Nudge Part X-, #232323 #E4E4E4"
+							"binding"		"key_press S, Nudge Part X-, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_SHIFT, Nudge Part Y+, #232323 #E4E4E4"
+							"binding"		"key_press D, Nudge Part Y+, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_SHIFT, Nudge Part Y-, #232323 #E4E4E4"
+							"binding"		"key_press Q, Nudge Part Y-, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
 		}
 	}
 
