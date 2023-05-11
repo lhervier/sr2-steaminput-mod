@@ -156,7 +156,6 @@
 		"group_source_bindings"
 		{
 			"107"		"switch active"
-			"108"		"right_trackpad active"
 			"109"		"left_trigger active"
 			"111"		"right_trigger active"
 		}
@@ -1042,22 +1041,6 @@
 				{
 				}
 			}
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
 		}
 	}
 
@@ -1074,17 +1057,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -1216,42 +1188,6 @@
 						{
 							"binding"		"key_press LEFT_CONTROL, , "
 							"binding"		"key_press Y, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"layer"		"1"
-		}
-	}
-	
-	// Right Trackpad
-	"group"
-	{
-		"id"		"108"
-		"mode"		"absolute_mouse"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button RIGHT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
 						}
 					}
 				}
