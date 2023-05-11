@@ -1144,7 +1144,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press X, , "
+							"binding"		"mouse_button RIGHT, , "
 						}
 						"settings"
 						{
@@ -1156,30 +1156,6 @@
 				{
 				}
 			}
-			"edge"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_CONTROL, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"output_trigger"		"1"
 		}
 	}
 
@@ -1200,7 +1176,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Z, , "
+							"binding"		"mouse_button LEFT, , "
 						}
 						"settings"
 						{
@@ -1212,30 +1188,6 @@
 				{
 				}
 			}
-			"edge"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_SHIFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"output_trigger"		"2"
 		}
 	}
 
