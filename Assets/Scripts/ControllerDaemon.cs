@@ -206,10 +206,10 @@ namespace Assets.Scripts {
 
         // =========================================================================================
 
-        // <param name="actionSet">The action set to set</param>
         // <summary>
         //  Change the current action set
         // </summary>
+        // <param name="actionSet">The action set to set</param>
         public void ChangeActionSet(EActionSets actionSet) {
             LOGGER.Info("Changing Action Set to " + actionSet);
             if( !this.ControllerConnected ) {
