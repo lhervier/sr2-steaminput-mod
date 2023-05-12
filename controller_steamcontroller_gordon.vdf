@@ -775,6 +775,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press O, Toggle Performance Analyzer, "
+						}
+					}
 				}
 				"disabled_activators"
 				{
