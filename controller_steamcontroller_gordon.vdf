@@ -122,10 +122,8 @@
 		"group_source_bindings"
 		{
 			"7"		"switch active"
-			"0"		"button_diamond active"
 			"19"	"left_trackpad active"
 			"12"	"right_trackpad active"
-			"3"		"joystick active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"
 		}
@@ -323,7 +321,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SEMICOLON, , "
+							"binding"		"key_press ESCAPE, Toggle Menu, "
 						}
 					}
 				}
@@ -335,13 +333,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press ESCAPE, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -351,13 +342,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press Q, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -367,13 +351,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press E, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -383,13 +360,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -399,141 +369,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button RIGHT, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_back_left_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_wheel SCROLL_UP, , "
-						}
-						"settings"
-						{
-							"hold_repeats"		"1"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_back_right_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_capture"
-			{
-				"activators"
-				{
-					"release"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action system_key_1, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-	}
-
-	// button diamond
-	"group"
-	{
-		"id"		"0"
-		"mode"		"four_buttons"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"button_a"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press Q, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_b"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press B, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_x"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press M, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_y"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press COMMA, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -587,13 +422,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -615,17 +443,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -634,42 +451,6 @@
 		}
 	}
 	
-	// Joystick
-	"group"
-	{
-		"id"		"3"
-		"mode"		"joystick_move"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"deadzone_inner_radius"		"7199"
-		}
-	}
-
 	// Left Trigger
 	"group"
 	{
@@ -781,7 +562,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, Show Menu, "
+							"binding"		"key_press ESCAPE, Toggle Menu, "
 						}
 					}
 				}
@@ -846,7 +627,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button LEFT, , "
+							"binding"		"key_press LEFT_SHIFT, Prevent Part Selection, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -938,13 +719,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press D, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -970,13 +744,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press M, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -986,13 +753,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press COMMA, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
