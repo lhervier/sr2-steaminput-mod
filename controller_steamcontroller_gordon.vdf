@@ -122,6 +122,7 @@
 		"group_source_bindings"
 		{
 			"7"		"switch active"
+			"8"		"button_diamond active"
 			"19"	"left_trackpad active"
 			"12"	"right_trackpad active"
 			"4"		"left_trigger active"
@@ -366,6 +367,61 @@
 				}
 			}
 			"button_back_right"
+			{
+				"activators"
+				{
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+	}
+
+	// Button Diamond
+	"group"
+	{
+		"id"		"8"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press ESCAPE, Close, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_y"
 			{
 				"activators"
 				{
