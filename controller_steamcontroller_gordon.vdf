@@ -807,6 +807,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button X, Previous Flyout Panel, #232323 #E4E4E4"
+						}
+					}
 				}
 				"disabled_activators"
 				{
@@ -816,6 +823,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button Y,Next Flyout Panel, , "
+						}
+					}
 				}
 				"disabled_activators"
 				{
