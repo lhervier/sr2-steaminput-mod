@@ -155,6 +155,7 @@
 		"group_source_bindings"
 		{
 			"107"		"switch active"
+			"115"		"button_diamond active"
 			"113"		"joystick active"
 			"109"		"left_trigger active"
 			"111"		"right_trigger active"
@@ -1115,6 +1116,34 @@
 		"settings"
 		{
 			"layer"		"1"
+		}
+	}
+
+	// Button Diamond
+	"group"
+	{
+		"id"		"115"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press DELETE, Delete Part, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
 		}
 	}
 
