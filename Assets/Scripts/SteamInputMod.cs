@@ -6,6 +6,7 @@ using Steamworks;
 using ModApi.Craft;
 using ModApi.Craft.Parts;
 using ModApi.GameLoop;
+using ModApi.Scenes.Events;
 
 namespace Assets.Scripts {
 
@@ -37,6 +38,11 @@ namespace Assets.Scripts {
         //  Delayed Action daemon
         // </summary>
         private DelayedActionDaemon delayedActionDaemon;
+
+        // <summary>
+        //  The Vizzy Controller to detect open and close events
+        // </summary>
+        private VizzyController vizzyController;
 
         // ===============================================================================
         //                      Unity initialization
@@ -76,8 +82,16 @@ namespace Assets.Scripts {
             this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
             LOGGER.Debug("Controller Daemon attached");
 
+            // Attach the Vizzy controller
+            this.vizzyController = gameObject.AddComponent<VizzyController>();
+            this.vizzyController.VizzyOpened += OnVizzyOpened;
+            this.vizzyController.VizzyClosed += OnVizzyClosed;
+            LOGGER.Debug("Vizzy Controller attached");
+
+            // Attach to SR2 Events
             Game.Instance.SceneManager.SceneLoaded += OnSceneLoaded;
             Game.Instance.SceneManager.SceneUnloading += OnSceneUnloading;
+            Game.Instance.UserInterface.AnyDialogsOpenChanged += this.OnAnyDialogsOpenChanged;
             LOGGER.Debug("SR2 Events attached");
 
             LOGGER.Debug("Started");
@@ -97,15 +111,34 @@ namespace Assets.Scripts {
             this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
             Destroy(this.controllerDaemon);
             LOGGER.Debug("Controller Daemon detached");
+
+            this.vizzyController.VizzyOpened -= OnVizzyOpened;
+            this.vizzyController.VizzyClosed -= OnVizzyClosed;
+            Destroy(this.vizzyController);
+            LOGGER.Debug("Vizzy Controller detached");
             
             Game.Instance.SceneManager.SceneLoaded -= OnSceneLoaded;
             Game.Instance.SceneManager.SceneUnloading -= OnSceneUnloading;
+            Game.Instance.UserInterface.AnyDialogsOpenChanged -= this.OnAnyDialogsOpenChanged;
             LOGGER.Debug("SR2 Events dettached");
 
             LOGGER.Debug("Destroyed");
         }
 
         // ====================================================================================
+
+        public void TriggerActionSetChange(string message) {
+            LOGGER.Debug(message);
+            this.delayedActionDaemon.TriggerDelayedAction(
+                this.ChangeActionSet, 
+                DELAY
+            );
+        }
+
+        public void CancelActionSetChange(string message) {
+            LOGGER.Debug(message);
+            this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
+        }
 
         // <summary>
         // Change the action set
@@ -128,7 +161,11 @@ namespace Assets.Scripts {
             if( ModSettings.Instance.DisplayMessageOnActionSetChange.Value ) {
                 string message = "SteamInput: Changing action set to " + actionSet;
                 if( Game.InDesignerScene ) {
-                    Game.Instance.Designer.ShowMessage(message);
+                    if( this.vizzyController.InVizzy ) {
+                        this.vizzyController.ShowMessage(message);
+                    } else {
+                        Game.Instance.Designer.ShowMessage(message);
+                    }
                 } else if( Game.InFlightScene ) {
                     Game.Instance.FlightScene.FlightSceneUI.ShowMessage(message);
                 } else if( Game.InPlanetStudioScene ) {
@@ -146,6 +183,9 @@ namespace Assets.Scripts {
             if( Game.Instance.UserInterface.AnyDialogsOpen ) {
                 return EActionSets.Menu;
             } else if( Game.InDesignerScene ) {
+                if( this.vizzyController.InVizzy ) {
+                    return EActionSets.Menu;
+                }
                 return EActionSets.Designer;
             } else if( Game.InTechTreeScene ) {
                 return EActionSets.TechTree;
@@ -176,64 +216,71 @@ namespace Assets.Scripts {
         //  New controller connected
         // </summary>
         private void OnControllerConnected() {
-            LOGGER.Debug("Controller connected");
-            this.delayedActionDaemon.TriggerDelayedAction(
-                this.ChangeActionSet, 
-                DELAY
-            );
+            this.TriggerActionSetChange("Controller connected");
         }
 
         // <summary>
         //  Controller disconnected
         // </summary>
         private void OnControllerDisconnected() {
-            LOGGER.Debug("Controller disconnected");
-            this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
+            this.CancelActionSetChange("Controller disconnected");
         }
 
         // ========================================================================================
         //                                      SR2 Events
         // ========================================================================================
 
-        public void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
-            Game.Instance.UserInterface.AnyDialogsOpenChanged += this.OnAnyDialogsOpenChanged;
+        // <summary>
+        //  Scene loaded. We only have a few scenes like Main Menu, Designer, Flight Scene, TechTree and PlanetStudio
+        // </summary>
+        public void OnSceneLoaded(object sender, SceneEventArgs args) {
             if( Game.InFlightScene ) {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged += this.OnForegroundMapViewStateChanged;
                 Game.Instance.FlightScene.CraftChanged += this.OnCraftChanged;
             }
-            this.delayedActionDaemon.TriggerDelayedAction(
-                this.ChangeActionSet, 
-                DELAY
-            );
+            this.TriggerActionSetChange("Scene Loaded : " + args.Scene);
         }
 
-        public void OnSceneUnloading(object sender, ModApi.Scenes.Events.SceneEventArgs args) {
+        // <summary>
+        //  Scene unloading
+        // </summary>
+        public void OnSceneUnloading(object sender, SceneEventArgs args) {
             if( Game.InFlightScene ) {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged -= this.OnForegroundMapViewStateChanged;
                 Game.Instance.FlightScene.CraftChanged -= this.OnCraftChanged;
             }
-            Game.Instance.UserInterface.AnyDialogsOpenChanged -= this.OnAnyDialogsOpenChanged;
+            this.CancelActionSetChange("Scene Unloading : " + args.Scene);
         }
 
+        // <summary>
+        //  A dialog box is opened or closed
+        // </summary>
+        public void OnAnyDialogsOpenChanged(bool inDialog) {
+            this.TriggerActionSetChange("Dialog Opened ? " + inDialog);
+        }
+
+        // =======================================================================
+        //      SR2 Events specific pour Flight Scene
+        // =======================================================================
+
         public void OnForegroundMapViewStateChanged(bool foreground) {
-            this.delayedActionDaemon.TriggerDelayedAction(
-                this.ChangeActionSet, 
-                DELAY
-            );
+            this.TriggerActionSetChange("Flight Scene: Map view in foreground ? " + foreground);
         }
 
         public void OnCraftChanged(ICraftNode craftNode) {
-            this.delayedActionDaemon.TriggerDelayedAction(
-                this.ChangeActionSet, 
-                DELAY
-            );
+            this.TriggerActionSetChange("Flight Scene: Craft changed");
         }
 
-        public void OnAnyDialogsOpenChanged(bool inDialog) {
-            this.delayedActionDaemon.TriggerDelayedAction(
-                this.ChangeActionSet, 
-                DELAY
-            );
+        // ===============
+        //  Vizzy Events
+        // ===============
+
+        public void OnVizzyOpened(object sender, EventArgs args) {
+            this.TriggerActionSetChange("Vizzy Editor: Opened");
+        }
+
+        public void OnVizzyClosed(object sender, EventArgs args) {
+            this.TriggerActionSetChange("Vizzy Editor: Closed");
         }
     }
 }
