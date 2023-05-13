@@ -1128,6 +1128,23 @@
 		"description"		""
 		"inputs"
 		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, Save Craft, , "
+							"binding"		"key_press S, Save Craft, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
 			"button_b"
 			{
 				"activators"
