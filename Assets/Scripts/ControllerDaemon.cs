@@ -8,8 +8,10 @@ using ModApi.GameLoop;
 namespace Assets.Scripts {
 
     // <summary>
-    //  Daemon in charge of listening to controllers connection/disconnection
+    //  Daemon in charge of listening to controller connection/disconnection
     //  It also allow to change the current action set of the controller
+    //
+    //  Only detects the first connected controller !
     // </summary>
     public class ControllerDaemon : MonoBehaviourBase {
         
@@ -182,15 +184,14 @@ namespace Assets.Scripts {
         private void LoadActionSets() {
             LOGGER.Debug("Loading Action Sets Handles");
             foreach(EActionSets actionSet in Enum.GetValues(typeof(EActionSets))) {
-                string actionSetName = actionSet.GetId();
-                if( actionSetName == "NotSetControls" ) {
+                if( actionSet == EActionSets.NotSet ) {
                     continue;
                 }
-                LOGGER.Debug("- Getting action set handle for " + actionSetName);
-                // Action Sets list should depend on the used controller. But that's not what the API is waiting for...
-                InputActionSetHandle_t actionSetHandle = SteamInput.GetActionSetHandle(actionSetName);
+                LOGGER.Debug("- Getting action set handle for " + actionSet);
+                string actionSetId = actionSet.GetId();
+                InputActionSetHandle_t actionSetHandle = SteamInput.GetActionSetHandle(actionSetId);
                 if( actionSetHandle.m_InputActionSetHandle == 0L ) {
-                    LOGGER.Debug("ERROR : Action set handle for " + actionSetName + " not found. I will use the default action set instead");
+                    LOGGER.Debug("ERROR : Action set handle for " + actionSetId + " not found. I will use the default action set instead");
                 }
                 this.actionsSetsHandles[actionSet] = actionSetHandle;
             }
