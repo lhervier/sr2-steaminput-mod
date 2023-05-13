@@ -70,6 +70,7 @@ namespace Assets.Scripts {
             this.delayedActionDaemon = gameObject.AddComponent<DelayedActionDaemon>();
             LOGGER.Debug("Delayed Actions Daemon attached");
             
+            // Attach the controller daemon
             this.controllerDaemon = gameObject.AddComponent<ControllerDaemon>();
             this.controllerDaemon.OnControllerConnected.Add(this.OnControllerConnected);
             this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
