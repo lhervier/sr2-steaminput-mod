@@ -181,7 +181,6 @@ namespace Assets.Scripts {
         // </summary>
         private void LoadActionSets() {
             LOGGER.Debug("Loading Action Sets Handles");
-            InputActionSetHandle_t ash = SteamInput.GetCurrentActionSet(this.controllerHandle);
             foreach(EActionSets actionSet in Enum.GetValues(typeof(EActionSets))) {
                 string actionSetName = actionSet.GetId();
                 if( actionSetName == "NotSetControls" ) {
