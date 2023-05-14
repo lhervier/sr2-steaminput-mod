@@ -1,7 +1,7 @@
 "controller_mappings"
 {
 	"version"			"3"
-	"revision"			"67"
+	"revision"			"2"
 	"title"				"SteamInput Mod"
 	"description"		"#SettingsController_AutosaveDescription"
 	"creator"			"76561197987585537"
