@@ -257,7 +257,13 @@
 		"name"		"EVAControlsRightPad"
 		"group_source_bindings"
 		{
-			"114"		"right_trackpad active"
+			// "9511"	"switch active"
+			// "9512"	"button_diamond active"
+			// "9513"	"left_trackpad active"
+			"9514"		"right_trackpad active"
+			// "9515"	"joystick active"
+			// "9516"	"left_trigger active"
+			// "9517"	"right_trigger active"
 		}
 	}
 
@@ -2983,7 +2989,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"114"
+		"id"		"9514"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
