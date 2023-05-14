@@ -206,13 +206,13 @@
 		"name"		"MapControls"
 		"group_source_bindings"
 		{
-			"72"	"switch active"
-			"73"	"button_diamond active"
-			"74"	"left_trackpad active"
-			"75"	"right_trackpad active"
-			"76"	"joystick active"
-			"77"	"left_trigger active"
-			"78"	"right_trigger active"
+			"9401"		"switch active"
+			"9402"		"button_diamond active"
+			"9403"		"left_trackpad active"
+			"9404"		"right_trackpad active"
+			"9405"		"joystick active"
+			"9406"		"left_trigger active"
+			"9407"		"right_trigger active"
 		}
 	}
 
@@ -1977,7 +1977,7 @@
 	// Switch
 	"group"
 	{
-		"id"		"72"
+		"id"		"9401"
 		"mode"		"switches"
 		"name"		""
 		"description"		""
@@ -2137,7 +2137,7 @@
 	// Button Diamond
 	"group"
 	{
-		"id"		"73"
+		"id"		"9402"
 		"mode"		"four_buttons"
 		"name"		""
 		"description"		""
@@ -2213,7 +2213,7 @@
 	// Left Trackpad
 	"group"
 	{
-		"id"		"74"
+		"id"		"9403"
 		"mode"		"scrollwheel"
 		"name"		""
 		"description"		""
@@ -2273,7 +2273,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"75"
+		"id"		"9404"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
@@ -2305,7 +2305,7 @@
 	// Joystick
 	"group"
 	{
-		"id"		"76"
+		"id"		"9405"
 		"mode"		"joystick_move"
 		"name"		""
 		"description"		""
@@ -2341,7 +2341,7 @@
 	// Left Trigger
 	"group"
 	{
-		"id"		"77"
+		"id"		"9406"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
@@ -2397,7 +2397,7 @@
 	// Right Trigger
 	"group"
 	{
-		"id"		"78"
+		"id"		"9407"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
