@@ -290,7 +290,7 @@
 			"9602"		"button_diamond active"
 			"9603"		"left_trackpad active"
 			"9604"		"right_trackpad active"
-			"9605"		"joystick active"
+			// "9605"	"joystick active"
 			"9606"		"left_trigger active"
 			"9607"		"right_trigger active"
 		}
@@ -306,7 +306,7 @@
 			// "9611"	"switch active"
 			// "9612"	"button_diamond active"
 			// "9613"	"left_trackpad active"
-			"9614"		"right_trackpad active"
+			// "9614"	"right_trackpad active"
 			// "9615"	"joystick active"
 			// "9616"	"left_trigger active"
 			// "9617"	"right_trigger active"
@@ -3084,7 +3084,7 @@
 	//  Group definitions for Tech Tree Action Set 
 	// ===========================================
 
-	// Switch
+	// Switches
 	"group"
 	{
 		"id"		"9601"
@@ -3101,7 +3101,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SEMICOLON, , "
+							"binding"		"key_press ESCAPE, Toggle Menu, "
 						}
 					}
 				}
@@ -3113,13 +3113,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press ESCAPE, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3129,13 +3122,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press Q, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3145,13 +3131,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press E, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3161,13 +3140,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3177,65 +3149,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action hold_layer 13 0 0, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_back_left_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_wheel SCROLL_UP, , "
-						}
-						"settings"
-						{
-							"hold_repeats"		"1"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_back_right_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_capture"
-			{
-				"activators"
-				{
-					"release"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action system_key_1, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3257,13 +3170,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press T, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3277,7 +3183,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press B, , "
+							"binding"		"key_press ESCAPE, Close, "
 						}
 					}
 				}
@@ -3289,13 +3195,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press M, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3305,13 +3204,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press COMMA, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3365,13 +3257,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3393,17 +3278,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3411,43 +3285,7 @@
 			}
 		}
 	}
-
-	// Joystick
-	"group"
-	{
-		"id"		"9605"
-		"mode"		"joystick_move"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"deadzone_inner_radius"		"7199"
-		}
-	}
-
+	
 	// Left Trigger
 	"group"
 	{
@@ -3465,7 +3303,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press X, , "
+							"binding"		"mouse_button RIGHT, , "
 						}
 						"settings"
 						{
@@ -3481,17 +3319,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_CONTROL, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3521,7 +3348,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Z, , "
+							"binding"		"mouse_button LEFT, , "
 						}
 						"settings"
 						{
@@ -3537,17 +3364,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_SHIFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
 				}
 				"disabled_activators"
 				{
@@ -3557,46 +3373,6 @@
 		"settings"
 		{
 			"output_trigger"		"2"
-		}
-	}
-
-	// =================================================================
-	//  Group definitions for Tech Tree Action Set, with Right Pad Layer
-	// =================================================================
-
-	// Right Trackpad
-	"group"
-	{
-		"id"		"9614"
-		"mode"		"absolute_mouse"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button RIGHT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"layer"		"1"
 		}
 	}
 
