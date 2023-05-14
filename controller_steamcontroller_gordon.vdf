@@ -291,7 +291,13 @@
 		"name"		"TechTreeControlsRightPad"
 		"group_source_bindings"
 		{
-			"116"		"right_trackpad active"
+			// "9611"	"switch active"
+			// "9612"	"button_diamond active"
+			// "9613"	"left_trackpad active"
+			"9614"		"right_trackpad active"
+			// "9615"	"joystick active"
+			// "9616"	"left_trigger active"
+			// "9617"	"right_trigger active"
 		}
 	}
 
@@ -3509,7 +3515,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"116"
+		"id"		"9614"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
