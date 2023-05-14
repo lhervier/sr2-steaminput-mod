@@ -117,7 +117,7 @@
 	// Menu Action Set
 	"preset"
 	{
-		"id"		"0"
+		"id"		"810"
 		"name"		"MenuControls"
 		"group_source_bindings"
 		{
@@ -133,7 +133,7 @@
 	// Designer Action Set
 	"preset"
 	{
-		"id"		"1"
+		"id"		"820"
 		"name"		"DesignerControls"
 		"group_source_bindings"
 		{
@@ -150,7 +150,7 @@
 	// Designer Action Set with "Right Pad" Layer
 	"preset"
 	{
-		"id"		"7"
+		"id"		"821"
 		"name"		"DesignerControlsRightPad"
 		"group_source_bindings"
 		{
@@ -166,7 +166,7 @@
 	// Flight Action Set
 	"preset"
 	{
-		"id"		"2"
+		"id"		"830"
 		"name"		"FlightControls"
 		"group_source_bindings"
 		{
@@ -183,7 +183,7 @@
 	// Flight Action Set with "Right Pad" Layer
 	"preset"
 	{
-		"id"		"8"
+		"id"		"831"
 		"name"		"FlightControlsRightPad"
 		"group_source_bindings"
 		{
@@ -194,7 +194,7 @@
 	// Map Action Set
 	"preset"
 	{
-		"id"		"3"
+		"id"		"840"
 		"name"		"MapControls"
 		"group_source_bindings"
 		{
@@ -211,7 +211,7 @@
 	// Map Action Set with "Right Pad" Layer
 	"preset"
 	{
-		"id"		"9"
+		"id"		"841"
 		"name"		"MapControlsRightPad"
 		"group_source_bindings"
 		{
@@ -222,7 +222,7 @@
 	// EVA Action Set
 	"preset"
 	{
-		"id"		"4"
+		"id"		"850"
 		"name"		"EVAControls"
 		"group_source_bindings"
 		{
@@ -239,7 +239,7 @@
 	// EVA Action Set with "Right Pad" Layer
 	"preset"
 	{
-		"id"		"10"
+		"id"		"851"
 		"name"		"EVAControlsRightPad"
 		"group_source_bindings"
 		{
@@ -250,7 +250,7 @@
 	// Tech Tree Action Set
 	"preset"
 	{
-		"id"		"5"
+		"id"		"860"
 		"name"		"TechTreeControls"
 		"group_source_bindings"
 		{
@@ -267,7 +267,7 @@
 	// Tech Tree Action Set with "Right Pad" Layer
 	"preset"
 	{
-		"id"		"11"
+		"id"		"861"
 		"name"		"TechTreeControlsRightPad"
 		"group_source_bindings"
 		{
@@ -278,7 +278,7 @@
 	// Planet Studio Action Set
 	"preset"
 	{
-		"id"		"6"
+		"id"		"870"
 		"name"		"PlanetStudioControls"
 		"group_source_bindings"
 		{
@@ -295,7 +295,7 @@
 	// Planet Studio Action Set with "Right Pad" Layer
 	"preset"
 	{
-		"id"		"12"
+		"id"		"871"
 		"name"		"PlanetStudioControlsRightPad"
 		"group_source_bindings"
 		{
