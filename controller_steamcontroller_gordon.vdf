@@ -1379,6 +1379,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press M, Toggle Map View, "
+						}
+					}
 				}
 			}
 			"left_bumper"
