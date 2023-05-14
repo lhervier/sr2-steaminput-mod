@@ -6,61 +6,60 @@ using ModApi.GameLoop;
 
 namespace Assets.Scripts {
 
-    // <summary>
-    //  Allows to launch an action in a set of frames. If the same action is triggered
-    //  a second time, the launch of the action will be delayed again.
-    // </summary>
+    /// <summary>
+    /// Allows to launch an action in a set of frames. If the same action is triggered
+    /// a second time, the launch of the action will be delayed again.
+    ///
+    /// FIXME: 
+    /// This is necessary as detecting the right action set needs information
+    /// that are not available immediately after a scene has loaded...
+    /// Without this daemon, when opening the flight scene, we will detect an EVA...
+    /// </summary>
     public class DelayedActionDaemon : MonoBehaviourBase {
         
-        // <summary>
-        //  Logger
-        // </summary>
+        /// <summary>
+        /// Logger
+        /// </summary>
         private static SteamInputLogger LOGGER = new SteamInputLogger("DelayedActionDaemon");
-
-        // <summary>
-        // Has the behaviour been initialized ?
-        // </summary>
-        private bool initialized = false;
 
         // ===============================================
 
-        // <summary>
-        //  Frame count at which the delayed action will occur
-        //  except if another operation
-        //  ask for another update, which will increase this value.
-        // </summary>
+        /// <summary>
+        /// Frame counts at which each action will occur
+        /// except if the same action ask for another update, 
+        /// which will increase this value.
+        /// </summary>
         private IDictionary<Action, int> actionThreshold = new Dictionary<Action, int>();
 
-        // <summary>
-        //  Co-routines used to delay the actions
-        // </summary>
+        /// <summary>
+        /// Co-routines used to delay the actions
+        /// </summary>
         private IDictionary<Action, Coroutine> coroutines = new Dictionary<Action, Coroutine>();
 
         // =======================================================================
         //              Unity Lifecycle
         // =======================================================================
 
-        // <summary>
-        //  Component awaked
-        // </summary>
+        /// <summary>
+        /// Component awaked
+        /// </summary>
         public void Awake() {
             LOGGER.Debug("Awaking");
             DontDestroyOnLoad(this);
             LOGGER.Debug("Awaked");
         }
 
-        // <summary>
-        //  Startup of the component
-        // </summary>
+        /// <summary>
+        /// Startup of the component
+        /// </summary>
         public void Start() {
             LOGGER.Debug("Starting");
-            this.initialized = true;
             LOGGER.Debug("Started");
         }
 
-        // <summary>
-        //  Component destroyed
-        // </summary>
+        /// <summary>
+        /// Component destroyed
+        /// </summary>
         public void OnDestroy() {
             LOGGER.Debug("Destroying");
             foreach( Coroutine cr in this.coroutines.Values ) {
@@ -68,20 +67,15 @@ namespace Assets.Scripts {
             }
             this.coroutines.Clear();
             this.actionThreshold.Clear();
-            this.initialized = false;
             LOGGER.Debug("Destroyed");
         }
 
         // ===============================================================
 
-        // <summary>
-        //  Trigger an action in the future
-        // </summary>
+        /// <summary>
+        /// Trigger an action in the future
+        /// </summary>
         public void TriggerDelayedAction(Action action, int inFrames) {
-            if( !this.initialized ) {
-                return;
-            }
-
             int threshold;
             if( this.actionThreshold.ContainsKey(action) ) {
                 threshold = Math.Max(Time.frameCount + inFrames, this.actionThreshold[action]);
@@ -105,14 +99,10 @@ namespace Assets.Scripts {
             this.actionThreshold.Remove(action);
         }
 
-        // <summary>
-        //  Cancel any action set change request
-        // </summary>
+        /// <summary>
+        /// Cancel any action set change request
+        /// </summary>
         public void CancelDelayedAction(Action action) {
-            if( !this.initialized ) {
-                return;
-            }
-            
             if( this.coroutines.ContainsKey(action) ) {
                 this.StopCoroutine(this.coroutines[action]);
             }

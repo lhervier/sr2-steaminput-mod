@@ -1,9 +1,5 @@
 using System;
-
-using ModApi.Craft;
-using ModApi.Craft.Parts;
 using ModApi.GameLoop;
-using ModApi.Scenes.Events;
 using ModApi.Ui;
 using ModApi.Ui.Events;
 
@@ -13,51 +9,49 @@ namespace Assets.Scripts {
 
     public class VizzyController : MonoBehaviourBase {
         
-        // <summary>
-        //  Logger
-        // </summary>
+        /// <summary>
+        /// Logger
+        /// </summary>
         private static SteamInputLogger LOGGER = new SteamInputLogger("VizzyController");
         
-        // <summary>
-        //  Are we currently in the Vizzy Editor ?
-        // </summary>
+        /// <summary>
+        /// Are we currently in the Vizzy Editor ?
+        /// </summary>
         public bool InVizzy { get; private set; } = false;
 
-        // <summary>
-        //  Vizzy Editor is open
-        // </summary>
+        /// <summary>
+        /// Vizzy Editor has opened
+        /// </summary>
         public event EventHandler VizzyOpened;
 
-        // <summary>
-        //  Vizzy Editor is close
-        // </summary>
+        /// <summary>
+        /// Vizzy Editor has closed
+        /// </summary>
         public event EventHandler VizzyClosed;
 
         // ===================================================================
 
-        // <summary>
-        //  The Vizzy UI
-        // </summary>
+        /// <summary>
+        /// The Vizzy UI
+        /// </summary>
         private VizzyUIScript vizzyUi = null;
-
-        // ===================================================================
 
         // ===============================================================================
         //                      Unity initialization
         // ===============================================================================
 
-        // <summary>
-        //  Component awaked
-        // </summary>
+        /// <summary>
+        /// Component awaked
+        /// </summary>
         protected void Awake() {
             LOGGER.Debug("Awaking");
             DontDestroyOnLoad(this);
             LOGGER.Debug("Awaked");
         }
 
-        // <summary>
-        //  Start of the plugin
-        // </summary>
+        /// <summary>
+        /// Start of the plugin
+        /// </summary>
         protected void Start() {
             LOGGER.Debug("Starting");
             Game.Instance.UserInterface.UserInterfaceLoaded += OnUserInterfaceLoaded;
@@ -66,9 +60,9 @@ namespace Assets.Scripts {
             LOGGER.Debug("Started");
         }
 
-        // <summary>
-        //  Component destroyed
-        // </summary>
+        /// <summary>
+        /// Component destroyed
+        /// </summary>
         public void OnDestroy() {
             LOGGER.Debug("Destroying");
             
@@ -79,9 +73,9 @@ namespace Assets.Scripts {
             LOGGER.Debug("Destroyed");
         }
 
-        // <summary>
-        //  Display a message in the Vizzy UI
-        // </summary>
+        /// <summary>
+        /// Display a message in the Vizzy UI
+        /// </summary>
         public void ShowMessage(string message) {
             if( !this.InVizzy ) {
                 LOGGER.Error("Unable to show message in Vizzy. Editor is not opened.");
@@ -91,9 +85,9 @@ namespace Assets.Scripts {
 
         // =======================================================================
 
-        // <summary>
-        //  A user interface is loading.
-        // </summary>
+        /// <summary>
+        /// A user interface is loading.
+        /// </summary>
         private void OnUserInterfaceLoading(object sender, UserInterfaceLoadingEventArgs args) {
             if( !UserInterfaceIds.Vizzy.Equals(args.UserInterfaceId) ) {
                 return;
@@ -109,9 +103,9 @@ namespace Assets.Scripts {
             };
         }
 
-        // <summary>
-        //  A user interface is loaded.
-        // </summary>
+        /// <summary>
+        /// A user interface is loaded.
+        /// </summary>
         private void OnUserInterfaceLoaded(object sender, UserInterfaceLoadedEventArgs args) {
             // Loaded Vizzy Editor
             if( !UserInterfaceIds.Vizzy.Equals(args.UserInterfaceId) ) {

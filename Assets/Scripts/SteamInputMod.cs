@@ -9,54 +9,54 @@ namespace Assets.Scripts {
 
     public class SteamInputMod : MonoBehaviourBase {
 
-        // <summary>
-        //  Logger
-        // </summary>
+        /// <summary>
+        /// Logger
+        /// </summary>
         private static SteamInputLogger LOGGER = new SteamInputLogger("MainMod");
         
-        // <summary>
-        //  Delay before applying an action set (in frames)
-        // </summary>
+        /// <summary>
+        /// Delay before applying an action set (in frames)
+        /// </summary>
         private static int DELAY = 10;
         
         // ==================================================================================
 
-        // <summary>
-        //  Previous action set (so we don't display the message when the value has not changed)
-        // </summary>
+        /// <summary>
+        /// Previous action set (so we don't display the message when the value has not changed)
+        /// </summary>
         private EActionSets prevActionSet = EActionSets.NotSet;
 
-        // <summary>
-        //  Connection Daemon to the controllers
-        // </summary>
+        /// <summary>
+        /// Daemon to be notified when a controller is connected
+        /// </summary>
         private ControllerDaemon controllerDaemon;
         
-        // <summary>
-        //  Delayed Action daemon
-        // </summary>
+        /// <summary>
+        /// Daemon to execute an action in a given set of frames
+        /// </summary>
         private DelayedActionDaemon delayedActionDaemon;
 
-        // <summary>
-        //  The Vizzy Controller to detect open and close events
-        // </summary>
+        /// <summary>
+        /// The Vizzy Controller to detect open and close events
+        /// </summary>
         private VizzyController vizzyController;
 
         // ===============================================================================
         //                      Unity initialization
         // ===============================================================================
 
-        // <summary>
-        //  Component awaked
-        // </summary>
+        /// <summary>
+        /// Component awaked
+        /// </summary>
         protected void Awake() {
             LOGGER.Debug("Awaking");
             DontDestroyOnLoad(this);
             LOGGER.Debug("Awaked");
         }
 
-        // <summary>
-        //  Start of the plugin
-        // </summary>
+        /// <summary>
+        /// Start of the mod
+        /// </summary>
         protected void Start() {
             LOGGER.Debug("Starting");
             
@@ -94,9 +94,9 @@ namespace Assets.Scripts {
             LOGGER.Debug("Started");
         }
 
-        // <summary>
-        //  Plugin destroyed
-        // </summary>
+        /// <summary>
+        /// Mod destroyed
+        /// </summary>
         public void OnDestroy() {
             LOGGER.Debug("Destroying");
             
@@ -124,10 +124,11 @@ namespace Assets.Scripts {
 
         // ====================================================================================
 
-        // <summary>
-        //  Ask for an action set change in DELAY frames.
-        // </summary>
-        // <param name="message">A message to display in the Logs</param>
+        /// <summary>
+        /// Ask for an action set change in DELAY frames.
+        /// The action set will be computed depending on the current context.
+        /// </summary>
+        /// <param name="message">A message to display in the Logs</param>
         public void TriggerActionSetChange(string message) {
             LOGGER.Debug(message);
             this.delayedActionDaemon.TriggerDelayedAction(
@@ -136,18 +137,18 @@ namespace Assets.Scripts {
             );
         }
 
-        // <summary>
-        //  Cancel current action set change (if any)
-        // </summary>
-        // <param name="message">A message to display in the logs</param>
+        /// <summary>
+        /// Cancel current action set change (if any)
+        /// </summary>
+        /// <param name="message">A message to display in the logs</param>
         public void CancelActionSetChange(string message) {
             LOGGER.Debug(message);
             this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
         }
 
-        // <summary>
-        // Change the action set
-        // </summary>
+        /// <summary>
+        /// Change the action set NOW
+        /// </summary>
         private void ChangeActionSet() {
             LOGGER.Debug("Changing action set");
             if( !this.controllerDaemon.ControllerConnected ) {
@@ -167,9 +168,11 @@ namespace Assets.Scripts {
             this.prevActionSet = actionSet;
         }
 
-        // <summary>
-        //  Show a message in the current UI
-        // </summary>
+        /// <summary>
+        /// Show a message in the current UI.
+        /// FIXME: Some UI, like TechTree, or the main Menu, cannot display messages...
+        /// </summary>
+        /// <param name="message">The message to display</param>
         private void ShowMessage(string message) {
             if( !ModSettings.Instance.DisplayMessageOnActionSetChange.Value ) {
                 return;
@@ -187,9 +190,9 @@ namespace Assets.Scripts {
             }
         }
 
-        // <summary>
-        //  Compute the action set to use, depending on the context
-        // </summary>
+        /// <summary>
+        /// Compute the action set to use, depending on the context
+        /// </summary>
         private EActionSets ComputeActionSet() {
             if( Game.Instance.UserInterface.AnyDialogsOpen ) {
                 return EActionSets.Menu;
@@ -220,19 +223,19 @@ namespace Assets.Scripts {
         }
         
         // ==============================================================================
-        //              Connection/disconnection events of controller
+        //              Connection/disconnection events of the controller
         // ==============================================================================
         
-        // <summary>
-        //  New controller connected
-        // </summary>
+        /// <summary>
+        /// Controller connected
+        /// </summary>
         private void OnControllerConnected() {
             this.TriggerActionSetChange("Controller connected");
         }
 
-        // <summary>
-        //  Controller disconnected
-        // </summary>
+        /// <summary>
+        /// Controller disconnected
+        /// </summary>
         private void OnControllerDisconnected() {
             this.CancelActionSetChange("Controller disconnected");
         }
@@ -241,9 +244,12 @@ namespace Assets.Scripts {
         //                                      SR2 Events
         // ========================================================================================
 
-        // <summary>
-        //  Scene loaded. We only have a few scenes like Main Menu, Designer, Flight Scene, TechTree and PlanetStudio
-        // </summary>
+        /// <summary>
+        /// Scene loaded. We only have a few scenes like Main Menu, Designer, Flight Scene, TechTree and PlanetStudio
+        /// But no scene for Vizzy.
+        /// </summary>
+        /// <param name="sender">Sender object of the event</param>
+        /// <param name="args">Arguments of the event</param>
         public void OnSceneLoaded(object sender, SceneEventArgs args) {
             if( Game.InFlightScene ) {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged += this.OnForegroundMapViewStateChanged;
@@ -252,9 +258,11 @@ namespace Assets.Scripts {
             this.TriggerActionSetChange("Scene Loaded : " + args.Scene);
         }
 
-        // <summary>
-        //  Scene unloading
-        // </summary>
+        /// <summary>
+        /// Scene unloading
+        /// </summary>
+        /// <param name="sender">Sender object of the event</param>
+        /// <param name="args">Arguments of the event</param>
         public void OnSceneUnloading(object sender, SceneEventArgs args) {
             if( Game.InFlightScene ) {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged -= this.OnForegroundMapViewStateChanged;
@@ -263,21 +271,31 @@ namespace Assets.Scripts {
             this.CancelActionSetChange("Scene Unloading : " + args.Scene);
         }
 
-        // <summary>
-        //  A dialog box is opened or closed
-        // </summary>
+        /// <summary>
+        /// A dialog box is opened or closed
+        /// </summary>
+        /// <param name="inDialog">True if a dialog box is opened. False otherwise.</param>
         public void OnAnyDialogsOpenChanged(bool inDialog) {
             this.TriggerActionSetChange("Dialog Opened ? " + inDialog);
         }
 
         // =======================================================================
-        //      SR2 Events specific pour Flight Scene
+        //      SR2 Events specific to the Flight Scene
         // =======================================================================
 
+        /// <summary>
+        /// Called when the map becomes active or inactive
+        /// </summary>
+        /// <param name="foreground">True if the map view is opened. False otherwise.</param>
         public void OnForegroundMapViewStateChanged(bool foreground) {
             this.TriggerActionSetChange("Flight Scene: Map view in foreground ? " + foreground);
         }
 
+        /// <summary>
+        /// Called when the user moves to another craft.
+        /// Needed to detect EVA.
+        /// </summary>
+        /// <param name="craftNode">The new craft node informations.</param>
         public void OnCraftChanged(ICraftNode craftNode) {
             this.TriggerActionSetChange("Flight Scene: Craft changed");
         }
@@ -286,10 +304,20 @@ namespace Assets.Scripts {
         //  Vizzy Events
         // ===============
 
+        /// <summary>
+        /// Called when the Vizzy Editor is opened
+        /// </summary>
+        /// <param name="sender">Sender object of the event</param>
+        /// <param name="args">Arguments of the event</param>
         public void OnVizzyOpened(object sender, EventArgs args) {
             this.TriggerActionSetChange("Vizzy Editor: Opened");
         }
 
+        /// <summary>
+        /// Called when the Vizzy Editor is closed
+        /// </summary>
+        /// <param name="sender">Sender object of the event</param>
+        /// <param name="args">Arguments of the event</param>
         public void OnVizzyClosed(object sender, EventArgs args) {
             this.TriggerActionSetChange("Vizzy Editor: Closed");
         }
