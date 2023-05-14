@@ -223,7 +223,13 @@
 		"name"		"MapControlsRightPad"
 		"group_source_bindings"
 		{
-			"112"		"right_trackpad active"
+			// "9411"	"switch active"
+			// "9412"	"button_diamond active"
+			// "9413"	"left_trackpad active"
+			"9414"		"right_trackpad active"
+			// "9415"	"joystick active"
+			// "9416"	"left_trigger active"
+			// "9417"	"right_trigger active"
 		}
 	}
 
@@ -2457,7 +2463,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"112"
+		"id"		"9414"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
