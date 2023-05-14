@@ -308,13 +308,13 @@
 		"name"		"PlanetStudioControls"
 		"group_source_bindings"
 		{
-			"95"	"switch active"
-			"96"	"button_diamond active"
-			"97"	"left_trackpad active"
-			"98"	"right_trackpad active"
-			"99"	"joystick active"
-			"100"	"left_trigger active"
-			"101"	"right_trigger active"
+			"9701"		"switch active"
+			"9702"		"button_diamond active"
+			"9703"		"left_trackpad active"
+			"9704"		"right_trackpad active"
+			"9705"		"joystick active"
+			"9706"		"left_trigger active"
+			"9707"		"right_trigger active"
 		}
 	}
 
@@ -3555,7 +3555,7 @@
 	// Switch
 	"group"
 	{
-		"id"		"95"
+		"id"		"9701"
 		"mode"		"switches"
 		"name"		""
 		"description"		""
@@ -3715,7 +3715,7 @@
 	// Button Diamond
 	"group"
 	{
-		"id"		"96"
+		"id"		"9702"
 		"mode"		"four_buttons"
 		"name"		""
 		"description"		""
@@ -3791,7 +3791,7 @@
 	// Left Trackpad
 	"group"
 	{
-		"id"		"97"
+		"id"		"9703"
 		"mode"		"scrollwheel"
 		"name"		""
 		"description"		""
@@ -3851,7 +3851,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"98"
+		"id"		"9704"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
@@ -3883,7 +3883,7 @@
 	// Joystick
 	"group"
 	{
-		"id"		"99"
+		"id"		"9705"
 		"mode"		"joystick_move"
 		"name"		""
 		"description"		""
@@ -3919,7 +3919,7 @@
 	// Left Trigger
 	"group"
 	{
-		"id"		"100"
+		"id"		"9706"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
@@ -3975,7 +3975,7 @@
 	// Right Trigger
 	"group"
 	{
-		"id"		"101"
+		"id"		"9707"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
