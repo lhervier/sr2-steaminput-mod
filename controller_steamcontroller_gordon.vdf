@@ -1383,7 +1383,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press M, Toggle Map View, "
+							"binding"		"key_press SEMICOLON, Toggle Map View, "
 						}
 					}
 				}
