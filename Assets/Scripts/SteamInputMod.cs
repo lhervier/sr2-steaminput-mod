@@ -124,6 +124,10 @@ namespace Assets.Scripts {
 
         // ====================================================================================
 
+        // <summary>
+        //  Ask for an action set change in DELAY frames.
+        // </summary>
+        // <param name="message">A message to display in the Logs</param>
         public void TriggerActionSetChange(string message) {
             LOGGER.Debug(message);
             this.delayedActionDaemon.TriggerDelayedAction(
@@ -132,6 +136,10 @@ namespace Assets.Scripts {
             );
         }
 
+        // <summary>
+        //  Cancel current action set change (if any)
+        // </summary>
+        // <param name="message">A message to display in the logs</param>
         public void CancelActionSetChange(string message) {
             LOGGER.Debug(message);
             this.delayedActionDaemon.CancelDelayedAction(this.ChangeActionSet);
