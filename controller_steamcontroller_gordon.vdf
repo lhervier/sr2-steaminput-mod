@@ -202,7 +202,7 @@
 		"group_source_bindings"
 		{
 			// "9311"	"switch active"
-			// "9312"	"button_diamond active"
+			"9312"		"button_diamond active"
 			// "9313"	"left_trackpad active"
 			"9314"		"right_trackpad active"
 			// "9315"	"joystick active"
@@ -1474,6 +1474,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press COMMA, Increase Time Wrap, "
+						}
+					}
 				}
 			}
 		}
@@ -1631,6 +1638,53 @@
 	// =================================================================
 	//  Group definitions for Flight Action Set, with Right Pad Layer
 	// =================================================================
+
+	// Button Diamond
+	"group"
+	{
+		"id"		"9312"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press M, Decrease Time Wrap, "
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
 
 	// Right Trackpad
 	"group"
