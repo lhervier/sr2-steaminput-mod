@@ -1462,12 +1462,26 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press B, Brake, "
+						}
+					}
 				}
 			}
 			"button_x"
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press T, Toggle Translation Mode, "
+						}
+					}
 				}
 			}
 			"button_y"
