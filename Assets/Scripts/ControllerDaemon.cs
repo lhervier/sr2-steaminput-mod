@@ -142,7 +142,9 @@ namespace Assets.Scripts {
                     LOGGER.Info("Controller disconnected");
                     this.IsControllerConnected = false;
                     this.UnloadActionSets();
-                    this.ControllerDisconnected.Invoke(this, new EventArgs());
+                    if( this.ControllerDisconnected != null ) {
+                        this.ControllerDisconnected.Invoke(this, new EventArgs());
+                    }
                 }
 
                 // Connects the controller
@@ -151,7 +153,9 @@ namespace Assets.Scripts {
                     this.controllerHandle = this._controllerHandles[0];
                     this.IsControllerConnected = true;
                     this.LoadActionSets();
-                    this.ControllerConnected.Invoke(this, new EventArgs());
+                    if( this.ControllerConnected != null ) {
+                        this.ControllerConnected.Invoke(this, new EventArgs());
+                    }
                 }
 
                 // Wait for 1 second

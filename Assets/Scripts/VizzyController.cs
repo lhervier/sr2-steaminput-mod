@@ -99,7 +99,9 @@ namespace Assets.Scripts {
                 LOGGER.Debug("Vizzy closed");
                 this.InVizzy = false;
                 this.vizzyUi = null;
-                this.VizzyClosed.Invoke(this, new EventArgs());
+                if( this.VizzyClosed != null ) {
+                    this.VizzyClosed.Invoke(this, new EventArgs());
+                }
             };
         }
 
@@ -115,7 +117,9 @@ namespace Assets.Scripts {
             VizzyUIController controller = args.XmlLayout.XmlLayoutController as VizzyUIController;
             this.InVizzy = true;
             this.vizzyUi = controller.VizzyUI;
-            this.VizzyOpened.Invoke(this, new EventArgs());
+            if( this.VizzyOpened != null ) {
+                this.VizzyOpened.Invoke(this, new EventArgs());
+            }
         }
     }
 }
