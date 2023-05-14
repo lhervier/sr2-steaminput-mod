@@ -325,7 +325,13 @@
 		"name"		"PlanetStudioControlsRightPad"
 		"group_source_bindings"
 		{
-			"118"		"right_trackpad active"
+			// "9711"		"switch active"
+			// "9712"		"button_diamond active"
+			// "9713"		"left_trackpad active"
+			"9714"			"right_trackpad active"
+			// "9715"		"joystick active"
+			// "9716"		"left_trigger active"
+			// "9717"		"right_trigger active"
 		}
 	}
 
@@ -4035,7 +4041,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"118"
+		"id"		"9714"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
