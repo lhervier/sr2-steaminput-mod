@@ -75,8 +75,8 @@ namespace Assets.Scripts {
             
             // Attach the controller daemon
             this.controllerDaemon = gameObject.AddComponent<ControllerDaemon>();
-            this.controllerDaemon.OnControllerConnected.Add(this.OnControllerConnected);
-            this.controllerDaemon.OnControllerDisconnected.Add(this.OnControllerDisconnected);
+            this.controllerDaemon.ControllerConnected += this.OnControllerConnected;
+            this.controllerDaemon.ControllerDisconnected += this.OnControllerDisconnected;
             LOGGER.Debug("Controller Daemon attached");
 
             // Attach the Vizzy controller
@@ -104,8 +104,8 @@ namespace Assets.Scripts {
             Destroy(this.delayedActionDaemon);
             LOGGER.Debug("Delayed Actions Dameon detached");
             
-            this.controllerDaemon.OnControllerDisconnected.Remove(this.OnControllerDisconnected);
-            this.controllerDaemon.OnControllerConnected.Remove(this.OnControllerConnected);
+            this.controllerDaemon.ControllerDisconnected -= this.OnControllerDisconnected;
+            this.controllerDaemon.ControllerConnected -= this.OnControllerConnected;
             Destroy(this.controllerDaemon);
             LOGGER.Debug("Controller Daemon detached");
 
@@ -151,7 +151,7 @@ namespace Assets.Scripts {
         /// </summary>
         private void ChangeActionSet() {
             LOGGER.Debug("Changing action set");
-            if( !this.controllerDaemon.ControllerConnected ) {
+            if( !this.controllerDaemon.IsControllerConnected ) {
                 LOGGER.Warn("No controller connected... Unable to change action set");
                 return;
             }
@@ -229,14 +229,18 @@ namespace Assets.Scripts {
         /// <summary>
         /// Controller connected
         /// </summary>
-        private void OnControllerConnected() {
+        /// <param name="sender">Sender object of the event</param>
+        /// <param name="args">Arguments of the event</param>
+        private void OnControllerConnected(object sender, EventArgs args) {
             this.TriggerActionSetChange("Controller connected");
         }
 
         /// <summary>
         /// Controller disconnected
         /// </summary>
-        private void OnControllerDisconnected() {
+        /// <param name="sender">Sender object of the event</param>
+        /// <param name="args">Arguments of the event</param>
+        private void OnControllerDisconnected(object sender, EventArgs args) {
             this.CancelActionSetChange("Controller disconnected");
         }
 

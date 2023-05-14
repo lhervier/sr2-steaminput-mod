@@ -29,17 +29,17 @@ namespace Assets.Scripts {
         /// <summary>
         /// Called when a the controller is connected
         /// </summary>
-        public ControllerEvent OnControllerConnected { get; private set; }
+        public event EventHandler ControllerConnected;
 
         /// <summary>
         /// Called when the controller is disconnected
         /// </summary>
-        public ControllerEvent OnControllerDisconnected {get; private set; }
+        public event EventHandler ControllerDisconnected;
 
         /// <summary>
         /// Is the controller connected ?
         /// </summary>
-        public bool ControllerConnected { get; private set; } = false;
+        public bool IsControllerConnected { get; private set; } = false;
 
         // ==============================================
 
@@ -76,11 +76,6 @@ namespace Assets.Scripts {
         public void Awake() {
             LOGGER.Debug("Awaking");
             DontDestroyOnLoad(this);
-            
-            this.OnControllerConnected = new ControllerEvent("controller.OnConnected");
-            this.OnControllerDisconnected = new ControllerEvent("controller.OnDisconnected");
-            this.ControllerConnected = false;
-            
             LOGGER.Debug("Awaked");
         }
 
@@ -120,7 +115,7 @@ namespace Assets.Scripts {
                 bool newController = false;
                 bool disconnectedController = false;
                 if( nbControllers == 0 ) {
-                    if( this.ControllerConnected ) {
+                    if( this.IsControllerConnected ) {
                         newController = false;
                         disconnectedController = true;
                     } else {
@@ -128,7 +123,7 @@ namespace Assets.Scripts {
                         disconnectedController = false;
                     }
                 } else {
-                    if( this.ControllerConnected ) {
+                    if( this.IsControllerConnected ) {
                         if( this.controllerHandle == this._controllerHandles[0] ) {
                             newController = false;
                             disconnectedController = false;
@@ -145,18 +140,18 @@ namespace Assets.Scripts {
                 // Disconnect the controller
                 if( disconnectedController ) {
                     LOGGER.Info("Controller disconnected");
-                    this.ControllerConnected = false;
+                    this.IsControllerConnected = false;
                     this.UnloadActionSets();
-                    this.OnControllerDisconnected.Fire();
+                    this.ControllerDisconnected.Invoke(this, new EventArgs());
                 }
 
                 // Connects the controller
                 if( newController ) {
                     LOGGER.Info("Controller connected");
                     this.controllerHandle = this._controllerHandles[0];
-                    this.ControllerConnected = true;
+                    this.IsControllerConnected = true;
                     this.LoadActionSets();
-                    this.OnControllerConnected.Fire();
+                    this.ControllerConnected.Invoke(this, new EventArgs());
                 }
 
                 // Wait for 1 second
@@ -197,7 +192,7 @@ namespace Assets.Scripts {
         /// <param name="actionSet">The action set to set</param>
         public void ChangeActionSet(EActionSets actionSet) {
             LOGGER.Info("Changing Action Set to " + actionSet);
-            if( !this.ControllerConnected ) {
+            if( !this.IsControllerConnected ) {
                 LOGGER.Warn("No controller connected. Nothing to change...");
                 return;
             }
