@@ -162,23 +162,29 @@ namespace Assets.Scripts {
             }
 
             this.controllerDaemon.ChangeActionSet(actionSet);
-            
-            if( ModSettings.Instance.DisplayMessageOnActionSetChange.Value ) {
-                string message = "SteamInput: Changing action set to " + actionSet;
-                if( Game.InDesignerScene ) {
-                    if( this.vizzyController.InVizzy ) {
-                        this.vizzyController.ShowMessage(message);
-                    } else {
-                        Game.Instance.Designer.ShowMessage(message);
-                    }
-                } else if( Game.InFlightScene ) {
-                    Game.Instance.FlightScene.FlightSceneUI.ShowMessage(message);
-                } else if( Game.InPlanetStudioScene ) {
-                    ModApi.PlanetStudio.PlanetStudioBase.Instance.PlanetStudioUI.ShowMessage(message);
-                }
-            }
+            this.ShowMessage("SteamInputMod: Changing action set to " + actionSet);
 
             this.prevActionSet = actionSet;
+        }
+
+        // <summary>
+        //  Show a message in the current UI
+        // </summary>
+        private void ShowMessage(string message) {
+            if( !ModSettings.Instance.DisplayMessageOnActionSetChange.Value ) {
+                return;
+            }
+            if( Game.InDesignerScene ) {
+                if( this.vizzyController.InVizzy ) {
+                    this.vizzyController.ShowMessage(message);
+                } else {
+                    Game.Instance.Designer.ShowMessage(message);
+                }
+            } else if( Game.InFlightScene ) {
+                Game.Instance.FlightScene.FlightSceneUI.ShowMessage(message);
+            } else if( Game.InPlanetStudioScene ) {
+                ModApi.PlanetStudio.PlanetStudioBase.Instance.PlanetStudioUI.ShowMessage(message);
+            }
         }
 
         // <summary>
