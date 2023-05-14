@@ -1521,19 +1521,6 @@
 					}
 				}
 			}
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-			}
 		}
 	}
 
