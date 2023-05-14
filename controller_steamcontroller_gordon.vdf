@@ -274,13 +274,13 @@
 		"name"		"TechTreeControls"
 		"group_source_bindings"
 		{
-			"88"	"switch active"
-			"89"	"button_diamond active"
-			"90"	"left_trackpad active"
-			"91"	"right_trackpad active"
-			"92"	"joystick active"
-			"93"	"left_trigger active"
-			"94"	"right_trigger active"
+			"9601"		"switch active"
+			"9602"		"button_diamond active"
+			"9603"		"left_trackpad active"
+			"9604"		"right_trackpad active"
+			"9605"		"joystick active"
+			"9606"		"left_trigger active"
+			"9607"		"right_trigger active"
 		}
 	}
 
@@ -3029,7 +3029,7 @@
 	// Switch
 	"group"
 	{
-		"id"		"88"
+		"id"		"9601"
 		"mode"		"switches"
 		"name"		""
 		"description"		""
@@ -3189,7 +3189,7 @@
 	// Button Diamond
 	"group"
 	{
-		"id"		"89"
+		"id"		"9602"
 		"mode"		"four_buttons"
 		"name"		""
 		"description"		""
@@ -3265,7 +3265,7 @@
 	// Left Trackpad
 	"group"
 	{
-		"id"		"90"
+		"id"		"9603"
 		"mode"		"scrollwheel"
 		"name"		""
 		"description"		""
@@ -3325,7 +3325,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"91"
+		"id"		"9604"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
@@ -3357,7 +3357,7 @@
 	// Joystick
 	"group"
 	{
-		"id"		"92"
+		"id"		"9605"
 		"mode"		"joystick_move"
 		"name"		""
 		"description"		""
@@ -3393,7 +3393,7 @@
 	// Left Trigger
 	"group"
 	{
-		"id"		"93"
+		"id"		"9606"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
@@ -3449,7 +3449,7 @@
 	// Right Trigger
 	"group"
 	{
-		"id"		"94"
+		"id"		"9607"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
