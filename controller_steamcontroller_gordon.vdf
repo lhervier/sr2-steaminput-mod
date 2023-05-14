@@ -241,7 +241,7 @@
 		"group_source_bindings"
 		{
 			"9501"		"switch active"
-			""9502"		"button_diamond active"
+			"9502"		"button_diamond active"
 			"9503"		"left_trackpad active"
 			"9504"		"right_trackpad active"
 			"9505"		"joystick active"
@@ -2669,7 +2669,7 @@
 	// Button Diamond
 	"group"
 	{
-		"id"		""9502"
+		"id"		"9502"
 		"mode"		"four_buttons"
 		"name"		""
 		"description"		""
