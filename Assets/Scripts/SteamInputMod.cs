@@ -107,7 +107,9 @@ namespace Assets.Scripts {
         // ====================================================================================
 
         /// <summary>
-        /// Change the action set
+        /// Change the action set after 10 frames.
+        /// FIXME: When just loading the Flight Scene, without waiting, we will also detect an EVA...
+        /// FIXME: We are also unable to display a message when a scene is just loaded...
         /// </summary>
         private void ChangeActionSet() {
             LOGGER.Debug("Changing action set");
@@ -115,23 +117,28 @@ namespace Assets.Scripts {
                 LOGGER.Warn("No controller connected... Unable to change action set");
                 return;
             }
+            this.StartCoroutine(this._ChangeActionSet());
+        }
+        private IEnumerator _ChangeActionSet() {
+            // Wait for 10 frames before applying the change
+            for( int i=0; i<10; i++ ) {
+                yield return new WaitForEndOfFrame();
+            }
             
             EActionSets actionSet = this.ComputeActionSet();
             if( actionSet.Equals(this.prevActionSet) ) {
                 LOGGER.Debug("Action set " + actionSet + " is already set. Doing nothing...");
-                return;
-            }
-
+            } else {
             this.controllerDaemon.ChangeActionSet(actionSet);
             this.ShowMessage("SteamInputMod: Action set changed to " + actionSet);
 
             this.prevActionSet = actionSet;
         }
+        }
 
         /// <summary>
         /// Show a message in the current UI.
         /// FIXME: Some UI, like TechTree, or the main Menu, cannot display messages...
-        /// FIXME: This will also not work when a scene is just loaded...
         /// </summary>
         /// <param name="message">The message to display</param>
         private void ShowMessage(string message) {
@@ -206,19 +213,11 @@ namespace Assets.Scripts {
         /// <summary>
         /// Scene loaded. We only have a few scenes like Main Menu, Designer, Flight Scene, TechTree and PlanetStudio
         /// But no scene for Vizzy.
-        /// FIXME: Just after a scene is loaded, we are not able to detect the right action set
-        /// and we are not able to display a message. For this reason, we will delay the event 10 frames in the future.
         /// </summary>
         /// <param name="sender">Sender object of the event</param>
         /// <param name="args">Arguments of the event</param>
         public void OnSceneLoaded(object sender, SceneEventArgs args) {
-            this.StartCoroutine(this._OnSceneLoaded(args.Scene));
-        }
-        private IEnumerator _OnSceneLoaded(string scene) {
-            for( int i=0; i<10; i++ ) {
-                yield return new WaitForEndOfFrame();
-            }
-            LOGGER.Debug("Scene Loaded 10 frames ago: " + scene);
+            LOGGER.Debug("Scene Loaded : " + args.Scene);
             if( Game.InFlightScene ) {
                 Game.Instance.FlightScene.ViewManager.MapViewManager.ForegroundStateChanged += this.OnForegroundMapViewStateChanged;
                 Game.Instance.FlightScene.CraftChanged += this.OnCraftChanged;
