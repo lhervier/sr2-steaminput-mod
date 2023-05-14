@@ -240,13 +240,13 @@
 		"name"		"EVAControls"
 		"group_source_bindings"
 		{
-			"79"	"switch active"
-			"80"	"button_diamond active"
-			"81"	"left_trackpad active"
-			"82"	"right_trackpad active"
-			"83"	"joystick active"
-			"84"	"left_trigger active"
-			"85"	"right_trigger active"
+			"9501"		"switch active"
+			""9502"		"button_diamond active"
+			"9503"		"left_trackpad active"
+			"9504"		"right_trackpad active"
+			"9505"		"joystick active"
+			"9506"		"left_trigger active"
+			"9507"		"right_trigger active"
 		}
 	}
 
@@ -2503,7 +2503,7 @@
 	// Switch
 	"group"
 	{
-		"id"		"79"
+		"id"		"9501"
 		"mode"		"switches"
 		"name"		""
 		"description"		""
@@ -2663,7 +2663,7 @@
 	// Button Diamond
 	"group"
 	{
-		"id"		"80"
+		"id"		""9502"
 		"mode"		"four_buttons"
 		"name"		""
 		"description"		""
@@ -2739,7 +2739,7 @@
 	// Left Trackpad
 	"group"
 	{
-		"id"		"81"
+		"id"		"9503"
 		"mode"		"scrollwheel"
 		"name"		""
 		"description"		""
@@ -2799,7 +2799,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"82"
+		"id"		"9504"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
@@ -2831,7 +2831,7 @@
 	// Joystick
 	"group"
 	{
-		"id"		"83"
+		"id"		"9505"
 		"mode"		"joystick_move"
 		"name"		""
 		"description"		""
@@ -2867,7 +2867,7 @@
 	// Left Trigger
 	"group"
 	{
-		"id"		"84"
+		"id"		"9506"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
@@ -2923,7 +2923,7 @@
 	// Right Trigger
 	"group"
 	{
-		"id"		"85"
+		"id"		"9507"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
