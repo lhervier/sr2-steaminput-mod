@@ -206,8 +206,8 @@
 			// "9313"	"left_trackpad active"
 			"9314"		"right_trackpad active"
 			// "9315"	"joystick active"
-			// "9316"	"left_trigger active"
-			// "9317"	"right_trigger active"
+			"9316"		"left_trigger active"
+			"9317"		"right_trigger active"
 		}
 	}
 
@@ -1716,6 +1716,98 @@
 		"settings"
 		{
 			"layer"		"1"
+		}
+	}
+
+	// Left Trigger
+	"group"
+	{
+		"id"		"9316"
+		"mode"		"trigger"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press X, Kill Throttle, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, Throttle Down, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Right Trigger
+	"group"
+	{
+		"id"		"9317"
+		"mode"		"trigger"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press W, Full Throttle, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Throttle Up, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
 		}
 	}
 
