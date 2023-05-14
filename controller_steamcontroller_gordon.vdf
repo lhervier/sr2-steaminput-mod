@@ -121,12 +121,13 @@
 		"name"		"MenuControls"
 		"group_source_bindings"
 		{
-			"7"		"switch active"
-			"8"		"button_diamond active"
-			"19"	"left_trackpad active"
-			"12"	"right_trackpad active"
-			"4"		"left_trigger active"
-			"5"		"right_trigger active"
+			"9101"		"switch active"
+			"9102"		"button_diamond active"
+			"9103"		"left_trackpad active"
+			"9104"		"right_trackpad active"
+			// "9105"	"joystick active"
+			"9106"		"left_trigger active"
+			"9107"		"right_trigger active"
 		}
 	}
 
@@ -310,7 +311,7 @@
 	// Switches
 	"group"
 	{
-		"id"		"7"
+		"id"		"9101"
 		"mode"		"switches"
 		"name"		""
 		"description"		""
@@ -383,7 +384,7 @@
 	// Button Diamond
 	"group"
 	{
-		"id"		"8"
+		"id"		"9102"
 		"mode"		"four_buttons"
 		"name"		""
 		"description"		""
@@ -438,7 +439,7 @@
 	// Left Trackpad
 	"group"
 	{
-		"id"		"19"
+		"id"		"9103"
 		"mode"		"scrollwheel"
 		"name"		""
 		"description"		""
@@ -491,7 +492,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"12"
+		"id"		"9104"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
@@ -512,7 +513,7 @@
 	// Left Trigger
 	"group"
 	{
-		"id"		"4"
+		"id"		"9106"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
@@ -557,7 +558,7 @@
 	// Right Trigger
 	"group"
 	{
-		"id"		"5"
+		"id"		"9107"
 		"mode"		"trigger"
 		"name"		""
 		"description"		""
