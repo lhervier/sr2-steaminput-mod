@@ -189,7 +189,13 @@
 		"name"		"FlightControlsRightPad"
 		"group_source_bindings"
 		{
-			"110"		"right_trackpad active"
+			// "9311"	"switch active"
+			// "9312"	"button_diamond active"
+			// "9313"	"left_trackpad active"
+			"9314"		"right_trackpad active"
+			// "9315"	"joystick active"
+			// "9316"	"left_trigger active"
+			// "9317"	"right_trigger active"
 		}
 	}
 
@@ -1931,7 +1937,7 @@
 	// Right Trackpad
 	"group"
 	{
-		"id"		"110"
+		"id"		"9314"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""
