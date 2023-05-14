@@ -1639,6 +1639,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press TAB, Toggle Navsphere, "
+						}
+					}
 				}
 			}
 			"button_b"
