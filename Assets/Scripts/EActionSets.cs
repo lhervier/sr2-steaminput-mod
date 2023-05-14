@@ -8,7 +8,8 @@ namespace Assets.Scripts {
         EVA,
         Map,
         TechTree,
-        PlanetStudio
+        PlanetStudio,
+        VizzyEditor
     }
 
     public static class EActionSetsUtils {

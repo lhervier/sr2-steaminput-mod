@@ -65,6 +65,11 @@
 			"title"			"Planet Studio"
 			"legacy_set"	"1"
 		}
+		"VizzyEditorControls"
+		{
+			"title"			"Vizzy Editor"
+			"legacy_set"	"1"
+		}
 	}
 	
 	// Action Layers
@@ -111,6 +116,13 @@
 			"legacy_set"		"1"
 			"set_layer"			"1"
 			"parent_set_name"	"PlanetStudioControls"
+		}
+		"VizzyEditorControlsRightPad"
+		{
+			"title"				"Right Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"VizzyEditorControls"
 		}
 	}
 	
@@ -332,6 +344,40 @@
 			// "9715"		"joystick active"
 			// "9716"		"left_trigger active"
 			// "9717"		"right_trigger active"
+		}
+	}
+
+	// Vizzy Editor Action Set
+	"preset"
+	{
+		"id"		"880"
+		"name"		"VizzyEditorControls"
+		"group_source_bindings"
+		{
+			"9801"		"switch active"
+			"9802"		"button_diamond active"
+			"9803"		"left_trackpad active"
+			"9804"		"right_trackpad active"
+			"9805"		"joystick active"
+			"9806"		"left_trigger active"
+			"9807"		"right_trigger active"
+		}
+	}
+
+	// Vizzy Editor Action Set with "Right Pad" Layer
+	"preset"
+	{
+		"id"		"881"
+		"name"		"VizzyEditorControlsRightPad"
+		"group_source_bindings"
+		{
+			// "9811"		"switch active"
+			// "9812"		"button_diamond active"
+			// "9813"		"left_trackpad active"
+			"9814"			"right_trackpad active"
+			// "9815"		"joystick active"
+			// "9816"		"left_trigger active"
+			// "9817"		"right_trigger active"
 		}
 	}
 
@@ -733,7 +779,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 8 0 0, , "
+							"binding"		"controller_action hold_layer 9 0 0, , "
 						}
 					}
 				}
@@ -1575,7 +1621,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 9 0 0, , "
+							"binding"		"controller_action hold_layer 10 0 0, , "
 						}
 					}
 				}
@@ -2095,7 +2141,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 10 0 0, , "
+							"binding"		"controller_action hold_layer 11 0 0, , "
 						}
 					}
 				}
@@ -2615,7 +2661,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 11 0 0, , "
+							"binding"		"controller_action hold_layer 12 0 0, , "
 						}
 					}
 				}
@@ -3135,7 +3181,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 12 0 0, , "
+							"binding"		"controller_action hold_layer 13 0 0, , "
 						}
 					}
 				}
@@ -3655,7 +3701,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 13 0 0, , "
+							"binding"		"controller_action hold_layer 14 0 0, , "
 						}
 					}
 				}
@@ -4042,6 +4088,526 @@
 	"group"
 	{
 		"id"		"9714"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
+	// ===========================================
+	//  Group definitions for Wizzy Editor Action Set 
+	// ===========================================
+
+	// Switch
+	"group"
+	{
+		"id"		"9801"
+		"mode"		"switches"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press SEMICOLON, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press ESCAPE, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Q, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press E, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action hold_layer 15 0 0, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_UP, , "
+						}
+						"settings"
+						{
+							"hold_repeats"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_capture"
+			{
+				"activators"
+				{
+					"release"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action system_key_1, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+	}
+
+	// Button Diamond
+	"group"
+	{
+		"id"		"9802"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press P, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press B, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press M, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press COMMA, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+	}
+
+	// Left Trackpad
+	"group"
+	{
+		"id"		"9803"
+		"mode"		"scrollwheel"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"scroll_clockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_UP, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"scroll_counterclockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_DOWN, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+	}
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"9804"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+	}
+
+	// Joystick
+	"group"
+	{
+		"id"		"9805"
+		"mode"		"joystick_move"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_LEFT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"deadzone_inner_radius"		"7199"
+		}
+	}
+
+	// Left Trigger
+	"group"
+	{
+		"id"		"9806"
+		"mode"		"trigger"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press X, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
+	}
+
+	// Right Trigger
+	"group"
+	{
+		"id"		"9807"
+		"mode"		"trigger"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Z, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
+	}
+
+	// =================================================================
+	//  Group definitions for Vizzy Editor Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"9814"
 		"mode"		"absolute_mouse"
 		"name"		""
 		"description"		""

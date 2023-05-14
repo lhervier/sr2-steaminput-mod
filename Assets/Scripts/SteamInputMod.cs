@@ -129,11 +129,11 @@ namespace Assets.Scripts {
             if( actionSet.Equals(this.prevActionSet) ) {
                 LOGGER.Debug("Action set " + actionSet + " is already set. Doing nothing...");
             } else {
-            this.controllerDaemon.ChangeActionSet(actionSet);
-            this.ShowMessage("SteamInputMod: Action set changed to " + actionSet);
+                this.controllerDaemon.ChangeActionSet(actionSet);
+                this.ShowMessage("SteamInputMod: Action set changed to " + actionSet);
 
-            this.prevActionSet = actionSet;
-        }
+                this.prevActionSet = actionSet;
+            }
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Assets.Scripts {
                 return EActionSets.Menu;
             } else if( Game.InDesignerScene ) {
                 if( this.vizzyController.InVizzy ) {
-                    return EActionSets.Menu;
+                    return EActionSets.VizzyEditor;
                 }
                 return EActionSets.Designer;
             } else if( Game.InTechTreeScene ) {
@@ -191,7 +191,7 @@ namespace Assets.Scripts {
             
             return EActionSets.Menu;
         }
-        
+
         // ==============================================================================
         //              Connection/disconnection events of the controller
         // ==============================================================================
@@ -295,7 +295,7 @@ namespace Assets.Scripts {
             LOGGER.Debug("Vizzy Editor Opened");
             this.ChangeActionSet();
         }
-
+        
         /// <summary>
         /// Called when the Vizzy Editor is closed
         /// </summary>
