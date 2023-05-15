@@ -2531,7 +2531,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Q, , "
+							"binding"		"key_press A, Turn Left, "
 						}
 					}
 				}
@@ -2544,7 +2544,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, , "
+							"binding"		"key_press E, Turn Right, "
 						}
 					}
 				}
