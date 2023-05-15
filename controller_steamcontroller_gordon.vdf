@@ -2717,13 +2717,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_SHIFT, Jetpack Input Modifier, "
-						}
-					}
 				}
 			}
 			"button_back_right"
