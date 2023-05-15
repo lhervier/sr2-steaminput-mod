@@ -2714,6 +2714,10 @@
 			{
 			}
 		}
+		"settings"
+		{
+			"layer"		"1"
+		}
 	}
 
 	// Button Diamond
@@ -2814,6 +2818,10 @@
 				}
 			}
 		}
+		"settings"
+		{
+			"layer"		"1"
+		}
 	}
 
 	// Right Trigger
@@ -2859,6 +2867,10 @@
 					}
 				}
 			}
+		}
+		"settings"
+		{
+			"layer"		"1"
 		}
 	}
 
