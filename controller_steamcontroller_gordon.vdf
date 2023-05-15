@@ -1131,6 +1131,10 @@
 				}
 			}
 		}
+		"settings"
+		{
+			"layer"		"1"
+		}
 	}
 
 	// Left Trackpad
@@ -1211,8 +1215,9 @@
 				}
 			}
 		}
-		"gameactions"
+		"settings"
 		{
+			"layer"		"1"
 		}
 	}
 
@@ -1284,7 +1289,7 @@
 		}
 		"settings"
 		{
-			"requires_click"		"0"
+			"layer"		"1"
 		}
 	}
 
@@ -1316,6 +1321,10 @@
 				}
 			}
 		}
+		"settings"
+		{
+			"layer"		"1"
+		}
 	}
 
 	// Right Trigger
@@ -1345,6 +1354,10 @@
 					}
 				}
 			}
+		}
+		"settings"
+		{
+			"layer"		"1"
 		}
 	}
 
