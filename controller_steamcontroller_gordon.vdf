@@ -586,6 +586,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_menu"
 			{
@@ -600,6 +603,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"left_bumper"
 			{
@@ -612,6 +618,9 @@
 							"binding"		"key_press A, Rotate Part Z-, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"right_bumper"
@@ -626,6 +635,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_back_left"
 			{
@@ -638,6 +650,9 @@
 							"binding"		"key_press LEFT_SHIFT, Prevent Part Selection, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_back_right"
@@ -652,48 +667,8 @@
 						}
 					}
 				}
-			}
-			"button_back_left_upper"
-			{
-				"activators"
+				"disabled_activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_wheel SCROLL_UP, , "
-						}
-						"settings"
-						{
-							"hold_repeats"		"1"
-						}
-					}
-				}
-			}
-			"button_back_right_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-			}
-			"button_capture"
-			{
-				"activators"
-				{
-					"release"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action system_key_1, , "
-						}
-					}
 				}
 			}
 		}
@@ -720,6 +695,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_b"
 			{
@@ -732,6 +710,9 @@
 							"binding"		"key_press TAB, Deselect Part, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_x"
@@ -746,6 +727,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_y"
 			{
@@ -755,9 +739,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button Y,Next Flyout Panel, , "
+							"binding"		"xinput_button Y, Next Flyout Panel, , "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -784,6 +771,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"scroll_counterclockwise"
 			{
@@ -796,6 +786,9 @@
 							"binding"		"mouse_wheel SCROLL_DOWN, , "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -810,12 +803,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-				}
-			}
 		}
 	}
 
@@ -840,6 +827,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -852,6 +842,9 @@
 							"binding"		"key_press S, Rotate Part X-, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -866,6 +859,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -879,10 +875,10 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
-		}
-		"settings"
-		{
 		}
 	}
 
@@ -910,6 +906,9 @@
 							"haptic_intensity"		"2"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -939,6 +938,9 @@
 							"haptic_intensity"		"2"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -970,6 +972,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"left_bumper"
 			{
@@ -984,6 +989,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"right_bumper"
 			{
@@ -997,6 +1005,9 @@
 							"binding"		"key_press E, Nudge Part Z+, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1028,6 +1039,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_b"
 			{
@@ -1040,6 +1054,9 @@
 							"binding"		"key_press DELETE, Delete Part, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_x"
@@ -1054,6 +1071,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_y"
 			{
@@ -1066,6 +1086,9 @@
 							"binding"		"key_press G, Group Part, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1100,6 +1123,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -1116,6 +1142,9 @@
 							"haptic_intensity"		"0"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -1134,6 +1163,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -1150,6 +1182,9 @@
 							"haptic_intensity"		"0"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1181,6 +1216,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -1194,6 +1232,9 @@
 							"binding"		"key_press S, Nudge Part X-, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -1209,6 +1250,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -1222,6 +1266,9 @@
 							"binding"		"key_press Q, Nudge Part Y-, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1257,6 +1304,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 		}
 		"settings"
@@ -1291,6 +1341,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 		}
 		"settings"
@@ -1324,6 +1377,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_menu"
 			{
@@ -1336,6 +1392,9 @@
 							"binding"		"key_press SEMICOLON, Toggle Map View, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"left_bumper"
@@ -1350,6 +1409,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"right_bumper"
 			{
@@ -1363,10 +1425,7 @@
 						}
 					}
 				}
-			}
-			"button_back_left"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -1381,6 +1440,9 @@
 							"binding"		"controller_action hold_layer 10 0 0, , "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1407,6 +1469,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_b"
 			{
@@ -1419,6 +1484,9 @@
 							"binding"		"key_press B, Brake, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_x"
@@ -1433,6 +1501,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_y"
 			{
@@ -1445,6 +1516,9 @@
 							"binding"		"key_press COMMA, Increase Time Wrap, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1471,6 +1545,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"scroll_counterclockwise"
 			{
@@ -1483,6 +1560,9 @@
 							"binding"		"mouse_wheel SCROLL_DOWN, , "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1497,12 +1577,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-				}
-			}
 		}
 	}
 
@@ -1515,12 +1589,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-				}
-			}
 		}
 		"settings"
 		{
@@ -1553,6 +1621,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 		}
 	}
@@ -1581,6 +1652,9 @@
 							"haptic_intensity"		"2"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1611,16 +1685,7 @@
 						}
 					}
 				}
-			}
-			"button_b"
-			{
-				"activators"
-				{
-				}
-			}
-			"button_x"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -1635,6 +1700,9 @@
 							"binding"		"key_press M, Decrease Time Wrap, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1665,6 +1733,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -1677,6 +1748,9 @@
 							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -1691,6 +1765,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -1703,6 +1780,9 @@
 							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1737,6 +1817,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"edge"
 			{
@@ -1753,6 +1836,9 @@
 							"haptic_intensity"		"2"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -1787,6 +1873,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"edge"
 			{
@@ -1803,6 +1892,9 @@
 							"haptic_intensity"		"2"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
