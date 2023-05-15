@@ -406,34 +406,7 @@
 						}
 					}
 				}
-			}
-			"button_menu"
-			{
-				"activators"
-				{
-				}
-			}
-			"left_bumper"
-			{
-				"activators"
-				{
-				}
-			}
-			"right_bumper"
-			{
-				"activators"
-				{
-				}
-			}
-			"button_back_left"
-			{
-				"activators"
-				{
-				}
-			}
-			"button_back_right"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -449,12 +422,6 @@
 		"description"		""
 		"inputs"
 		{
-			"button_a"
-			{
-				"activators"
-				{
-				}
-			}
 			"button_b"
 			{
 				"activators"
@@ -467,16 +434,7 @@
 						}
 					}
 				}
-			}
-			"button_x"
-			{
-				"activators"
-				{
-				}
-			}
-			"button_y"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -504,6 +462,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"scroll_counterclockwise"
 			{
@@ -517,10 +478,7 @@
 						}
 					}
 				}
-			}
-			"click"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -536,12 +494,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-				}
-			}
 		}
 	}
 	
@@ -570,17 +522,10 @@
 						}
 					}
 				}
-			}
-			"edge"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
-		}
-		"settings"
-		{
-			"output_trigger"		"1"
 		}
 	}
 
@@ -609,17 +554,10 @@
 						}
 					}
 				}
-			}
-			"edge"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
-		}
-		"settings"
-		{
-			"output_trigger"		"2"
 		}
 	}
 
