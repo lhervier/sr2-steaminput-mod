@@ -103,13 +103,6 @@
 			"set_layer"			"1"
 			"parent_set_name"	"EVAControls"
 		}
-		"TechTreeControlsRightPad"
-		{
-			"title"				"Right Pad"
-			"legacy_set"		"1"
-			"set_layer"			"1"
-			"parent_set_name"	"TechTreeControls"
-		}
 		"PlanetStudioControlsRightPad"
 		{
 			"title"				"Right Pad"
@@ -293,23 +286,6 @@
 			// "9605"	"joystick active"
 			"9606"		"left_trigger active"
 			"9607"		"right_trigger active"
-		}
-	}
-
-	// Tech Tree Action Set with "Right Pad" Layer
-	"preset"
-	{
-		"id"		"861"
-		"name"		"TechTreeControlsRightPad"
-		"group_source_bindings"
-		{
-			// "9611"	"switch active"
-			// "9612"	"button_diamond active"
-			// "9613"	"left_trackpad active"
-			// "9614"	"right_trackpad active"
-			// "9615"	"joystick active"
-			// "9616"	"left_trigger active"
-			// "9617"	"right_trigger active"
 		}
 	}
 
