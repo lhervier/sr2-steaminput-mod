@@ -2811,9 +2811,6 @@
 						}
 					}
 				}
-				"disabled_activators"
-				{
-				}
 			}
 			"dpad_east"
 			{
@@ -2827,9 +2824,6 @@
 						}
 					}
 				}
-				"disabled_activators"
-				{
-				}
 			}
 			"dpad_west"
 			{
@@ -2842,9 +2836,6 @@
 							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
 						}
 					}
-				}
-				"disabled_activators"
-				{
 				}
 			}
 		}
