@@ -1497,7 +1497,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press T, Toggle Translation Mode, "
+							"binding"		"key_press ENTER, Lock Heading, "
 						}
 					}
 				}
@@ -1682,6 +1682,22 @@
 						"bindings"
 						{
 							"binding"		"key_press TAB, Toggle Navsphere, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press T, Toggle Translation Mode, "
 						}
 					}
 				}
@@ -1925,9 +1941,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SEMICOLON, , "
+							"binding"		"key_press ESCAPE, Toggle Menu, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_menu"
@@ -1938,9 +1957,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, , "
+							"binding"		"key_press SEMICOLON, Toggle Map View, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"left_bumper"
@@ -1951,9 +1973,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Q, , "
+							"binding"		"key_press A, Roll Left, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"right_bumper"
@@ -1964,9 +1989,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, , "
+							"binding"		"key_press E, Roll Right, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_back_left"
@@ -1977,9 +2005,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button LEFT, , "
+							"binding"		"key_press RIGHT_CONTROL, Map Set Target Modifier, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_back_right"
@@ -1994,48 +2025,8 @@
 						}
 					}
 				}
-			}
-			"button_back_left_upper"
-			{
-				"activators"
+				"disabled_activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_wheel SCROLL_UP, , "
-						}
-						"settings"
-						{
-							"hold_repeats"		"1"
-						}
-					}
-				}
-			}
-			"button_back_right_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-			}
-			"button_capture"
-			{
-				"activators"
-				{
-					"release"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action system_key_1, , "
-						}
-					}
 				}
 			}
 		}
@@ -2058,9 +2049,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press M, , "
+							"binding"		"key_press SPACE, Activate Stage, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_b"
@@ -2071,9 +2065,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press B, , "
+							"binding"		"key_press B, Brake, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_x"
@@ -2084,9 +2081,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press M, , "
+							"binding"		"key_press ENTER, Lock Heading, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_y"
@@ -2097,9 +2097,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press COMMA, , "
+							"binding"		"key_press COMMA, Increase Time Wrap, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2126,6 +2129,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"scroll_counterclockwise"
 			{
@@ -2139,18 +2145,8 @@
 						}
 					}
 				}
-			}
-			"click"
-			{
-				"activators"
+				"disabled_activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
 				}
 			}
 		}
@@ -2165,23 +2161,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -2194,23 +2173,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
 		}
 		"settings"
 		{
@@ -2235,7 +2197,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press X, , "
+							"binding"		"mouse_button RIGHT, , "
 						}
 						"settings"
 						{
@@ -2243,28 +2205,10 @@
 						}
 					}
 				}
-			}
-			"edge"
-			{
-				"activators"
+				"disabled_activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_CONTROL, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
 				}
 			}
-		}
-		"settings"
-		{
-			"output_trigger"		"1"
 		}
 	}
 
@@ -2285,7 +2229,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Z, , "
+							"binding"		"mouse_button LEFT, , "
 						}
 						"settings"
 						{
@@ -2293,28 +2237,10 @@
 						}
 					}
 				}
-			}
-			"edge"
-			{
-				"activators"
+				"disabled_activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_SHIFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
 				}
 			}
-		}
-		"settings"
-		{
-			"output_trigger"		"2"
 		}
 	}
 
@@ -2322,11 +2248,155 @@
 	//  Group definitions for Map Action Set, with Right Pad Layer
 	// =================================================================
 
-	// Right Trackpad
+	// Button Diamond
 	"group"
 	{
-		"id"		"9414"
-		"mode"		"absolute_mouse"
+		"id"		"9412"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press TAB, Toggle Navsphere, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press T, Toggle Translation Mode, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press M, Decrease Time Wrap, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
+	// Left Trackpad
+	"group"
+	{
+		"id"		"9413"
+		"mode"		"dpad"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press C, Next Camera Mode, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press DASH, Next Command Pod, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	
+	// Left Trigger
+	"group"
+	{
+		"id"		"9416"
+		"mode"		"trigger"
 		"name"		""
 		"description"		""
 		"inputs"
@@ -2339,13 +2409,92 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"key_press X, Kill Throttle, "
 						}
 						"settings"
 						{
-							"haptic_intensity"		"1"
+							"haptic_intensity"		"2"
 						}
 					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, Throttle Down, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
+	// Right Trigger
+	"group"
+	{
+		"id"		"9417"
+		"mode"		"trigger"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press W, Full Throttle, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Throttle Up, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
