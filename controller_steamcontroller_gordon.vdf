@@ -2449,6 +2449,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_menu"
 			{
@@ -2461,6 +2464,9 @@
 							"binding"		"key_press SEMICOLON, Toggle Map View, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"left_bumper"
@@ -2475,6 +2481,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"right_bumper"
 			{
@@ -2488,10 +2497,7 @@
 						}
 					}
 				}
-			}
-			"button_back_left"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -2506,6 +2512,9 @@
 							"binding"		"controller_action hold_layer 12 0 0, , "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2532,10 +2541,7 @@
 						}
 					}
 				}
-			}
-			"button_b"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -2551,6 +2557,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_y"
 			{
@@ -2563,6 +2572,9 @@
 							"binding"		"key_press COMMA, Increase Time Wrap, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2589,6 +2601,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"scroll_counterclockwise"
 			{
@@ -2601,6 +2616,9 @@
 							"binding"		"mouse_wheel SCROLL_DOWN, , "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2615,12 +2633,6 @@
 		"description"		""
 		"inputs"
 		{
-			"click"
-			{
-				"activators"
-				{
-				}
-			}
 		}
 	}
 
@@ -2645,6 +2657,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -2657,6 +2672,9 @@
 							"binding"		"key_press S, Backward, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -2671,6 +2689,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -2684,6 +2705,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"click"
 			{
@@ -2696,6 +2720,9 @@
 							"binding"		"key_press LEFT_CONTROL, Toggle Walk/Run, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2726,6 +2753,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 		}
 	}
@@ -2755,6 +2785,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 		}
 	}
@@ -2772,18 +2805,6 @@
 		"description"		""
 		"inputs"
 		{
-			"button_escape"
-			{
-				"activators"
-				{
-				}
-			}
-			"button_menu"
-			{
-				"activators"
-				{
-				}
-			}
 			"left_bumper"
 			{
 				"activators"
@@ -2796,6 +2817,9 @@
 							"binding"		"key_press A, Jetpack Down, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"right_bumper"
@@ -2811,15 +2835,9 @@
 						}
 					}
 				}
-			}
-			"button_back_left"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
-			}
-			"button_back_right"
-			{
 			}
 		}
 		"settings"
@@ -2849,16 +2867,7 @@
 						}
 					}
 				}
-			}
-			"button_b"
-			{
-				"activators"
-				{
-				}
-			}
-			"button_x"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -2873,6 +2882,9 @@
 							"binding"		"key_press M, Decrease Time Wrap, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2903,6 +2915,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -2915,6 +2930,9 @@
 							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -2929,6 +2947,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -2941,6 +2962,9 @@
 							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
@@ -2972,6 +2996,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_south"
 			{
@@ -2985,6 +3012,9 @@
 							"binding"		"key_press S, Jetpack Pitch Back, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"dpad_east"
@@ -3000,6 +3030,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"dpad_west"
 			{
@@ -3013,6 +3046,9 @@
 							"binding"		"key_press Q, JetPack Roll Left, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
