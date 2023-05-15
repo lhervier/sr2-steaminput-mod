@@ -204,8 +204,8 @@
 			// "9311"	"switch active"
 			"9312"		"button_diamond active"
 			"9313"		"left_trackpad active"
-			"9314"		"right_trackpad active"
-			"9315"		"joystick active"
+			// "9314"	"right_trackpad active"
+			// "9315"	"joystick active"
 			"9316"		"left_trigger active"
 			"9317"		"right_trigger active"
 		}
@@ -1759,70 +1759,6 @@
 		"settings"
 		{
 			"layer"		"1"
-			"layout"		"0"
-		}
-	}
-
-	// Right Trackpad
-	"group"
-	{
-		"id"		"9314"
-		"mode"		"absolute_mouse"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"layer"		"1"
-		}
-	}
-
-	// Joystick
-	"group"
-	{
-		"id"		"9315"
-		"mode"		"dpad"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"dpad_north"
-			{
-				"activators"
-				{
-				}
-			}
-			"dpad_south"
-			{
-				"activators"
-				{
-				}
-			}
-			"dpad_east"
-			{
-				"activators"
-				{
-				}
-			}
-			"dpad_west"
-			{
-				"activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"layer"		"1"
-			"requires_click"		"0"
 			"layout"		"0"
 		}
 	}
