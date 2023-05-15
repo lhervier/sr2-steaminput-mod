@@ -271,7 +271,7 @@
 		{
 			"9511"		"switch active"
 			"9512"		"button_diamond active"
-			// "9513"	"left_trackpad active"
+			"9513"		"left_trackpad active"
 			// "9514"	"right_trackpad active"
 			"9515"		"joystick active"
 			// "9516"	"left_trigger active"
@@ -2779,6 +2779,74 @@
 						"bindings"
 						{
 							"binding"		"key_press M, Decrease Time Wrap, "
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
+	// Left Trackpad
+	"group"
+	{
+		"id"		"9513"
+		"mode"		"dpad"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press C, Next Camera Mode, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press DASH, Next Command Pod, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
 						}
 					}
 				}
