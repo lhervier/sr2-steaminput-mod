@@ -2505,7 +2505,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press SEMICOLON, , "
+							"binding"		"key_press ESCAPE, Toggle Menu, "
 						}
 					}
 				}
@@ -2518,7 +2518,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, , "
+							"binding"		"key_press SEMICOLON, Toggle Map View, "
 						}
 					}
 				}
