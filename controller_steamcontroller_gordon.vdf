@@ -110,13 +110,6 @@
 			"set_layer"			"1"
 			"parent_set_name"	"PlanetStudioControls"
 		}
-		"VizzyEditorControlsRightPad"
-		{
-			"title"				"Right Pad"
-			"legacy_set"		"1"
-			"set_layer"			"1"
-			"parent_set_name"	"VizzyEditorControls"
-		}
 	}
 	
 	// Menu Action Set
@@ -3542,19 +3535,6 @@
 					}
 				}
 			}
-			"button_back_right"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action hold_layer 15 0 0, , "
-						}
-					}
-				}
-			}
 			"button_back_left_upper"
 			{
 				"activators"
@@ -3875,43 +3855,6 @@
 		"settings"
 		{
 			"output_trigger"		"2"
-		}
-	}
-
-	// =================================================================
-	//  Group definitions for Vizzy Editor Action Set, with Right Pad Layer
-	// =================================================================
-
-	// Right Trackpad
-	"group"
-	{
-		"id"		"9814"
-		"mode"		"absolute_mouse"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button RIGHT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"layer"		"1"
 		}
 	}
 
