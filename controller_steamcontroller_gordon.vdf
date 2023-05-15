@@ -1698,12 +1698,12 @@
 	"group"
 	{
 		"id"		"9313"
-		"mode"		"radial_menu"
+		"mode"		"dpad"
 		"name"		""
 		"description"		""
 		"inputs"
 		{
-			"touch_menu_button_1"
+			"dpad_north"
 			{
 				"activators"
 				{
@@ -1711,12 +1711,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 1, Action Group 1, , #232323 #E4E4E4"
+							"binding"		"key_press C, Next Camera Mode, #232323 #E4E4E4"
 						}
 					}
 				}
 			}
-			"touch_menu_button_2"
+			"dpad_south"
 			{
 				"activators"
 				{
@@ -1724,12 +1724,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 2, Action Group 2, #232323 #E4E4E4"
+							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
 						}
 					}
 				}
 			}
-			"touch_menu_button_3"
+			"dpad_east"
 			{
 				"activators"
 				{
@@ -1737,12 +1737,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 3, Action Group 3, #232323 #E4E4E4"
+							"binding"		"key_press DASH, Next Command Pod, #232323 #E4E4E4"
 						}
 					}
 				}
 			}
-			"touch_menu_button_4"
+			"dpad_west"
 			{
 				"activators"
 				{
@@ -1750,85 +1750,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 4, Action Group 4, #232323 #E4E4E4"
-						}
-					}
-				}
-			}
-			"touch_menu_button_5"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press 5, Action Group 5, #232323 #E4E4E4"
-						}
-					}
-				}
-			}
-			"touch_menu_button_6"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press 6, Action Group 6, #232323 #E4E4E4"
-						}
-					}
-				}
-			}
-			"touch_menu_button_7"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press 7, Action Group 7, #232323 #E4E4E4"
-						}
-					}
-				}
-			}
-			"touch_menu_button_8"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press 8, Action Group 8, #232323 #E4E4E4"
-						}
-					}
-				}
-			}
-			"touch_menu_button_9"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press 9, Action Group 9, #232323 #E4E4E4"
-						}
-					}
-				}
-			}
-			"touch_menu_button_10"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press 0, Action Group 10, #232323 #E4E4E4"
+							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -1837,6 +1759,7 @@
 		"settings"
 		{
 			"layer"		"1"
+			"layout"		"0"
 		}
 	}
 
@@ -1875,28 +1798,11 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press C, Next Camera Mode, #232323 #E4E4E4"
-						}
-					}
 				}
 			}
 			"dpad_south"
 			{
 				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
 				{
 				}
 			}
@@ -1904,31 +1810,11 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press DASH, Next Command Pod, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
-				{
 				}
 			}
 			"dpad_west"
 			{
 				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
 				{
 				}
 			}
