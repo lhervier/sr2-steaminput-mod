@@ -145,8 +145,6 @@
 			"9207"		"right_trigger active"
 		}
 	}
-
-	// Designer Action Set with "Right Pad" Layer
 	"preset"
 	{
 		"id"		"821"
@@ -179,8 +177,6 @@
 			"9307"		"right_trigger active"
 		}
 	}
-
-	// Flight Action Set with "Right Pad" Layer
 	"preset"
 	{
 		"id"		"831"
@@ -213,8 +209,6 @@
 			"9407"		"right_trigger active"
 		}
 	}
-
-	// Map Action Set with "Right Pad" Layer
 	"preset"
 	{
 		"id"		"841"
@@ -247,8 +241,6 @@
 			"9507"		"right_trigger active"
 		}
 	}
-
-	// EVA Action Set with "Right Pad" Layer
 	"preset"
 	{
 		"id"		"851"
@@ -298,8 +290,6 @@
 			"9707"		"right_trigger active"
 		}
 	}
-
-	// Planet Studio Action Set with "Right Pad" Layer
 	"preset"
 	{
 		"id"		"871"
@@ -333,26 +323,13 @@
 		}
 	}
 
-	// Vizzy Editor Action Set with "Right Pad" Layer
-	"preset"
-	{
-		"id"		"881"
-		"name"		"VizzyEditorControlsRightPad"
-		"group_source_bindings"
-		{
-			// "9811"		"switch active"
-			// "9812"		"button_diamond active"
-			// "9813"		"left_trackpad active"
-			"9814"			"right_trackpad active"
-			// "9815"		"joystick active"
-			// "9816"		"left_trigger active"
-			// "9817"		"right_trigger active"
-		}
-	}
+	// ===================
+	//  Group definitions 
+	// ===================
 
-	// =======================================
-	//  Group definitions for Menu Action Set 
-	// =======================================
+	// --------------------- 
+	//  Menu Action Set
+	// ---------------------
 
 	// Switches
 	"group"
@@ -530,9 +507,9 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for Designer Action Set 
-	// ===========================================
+	// ---------------------
+	//  Designer Action Set 
+	// ---------------------
 
 	// Switches
 	"group"
@@ -915,9 +892,7 @@
 		}
 	}
 
-	// =================================================================
-	//  Group definitions for Designer Action Set, with Right Pad Layer
-	// =================================================================
+	// --------------- Right Pad Layer ----------------
 
 	// Switch
 	"group"
@@ -1321,9 +1296,9 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for Flight Action Set 
-	// ===========================================
+	// -------------------
+	//  Flight Action Set 
+	// -------------------
 
 	// Switches
 	"group"
@@ -1629,9 +1604,7 @@
 		}
 	}
 
-	// =================================================================
-	//  Group definitions for Flight Action Set, with Right Pad Layer
-	// =================================================================
+	// -------------------- Right Pad Layer ------------------
 
 	// Button Diamond
 	"group"
@@ -1889,9 +1862,9 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for Map Action Set 
-	// ===========================================
+	// ----------------
+	//  Map Action Set 
+	// ----------------
 
 	// Switch
 	"group"
@@ -2213,9 +2186,7 @@
 		}
 	}
 
-	// =================================================================
-	//  Group definitions for Map Action Set, with Right Pad Layer
-	// =================================================================
+	// ----------------- Right Pad Layer --------------------
 
 	// Button Diamond
 	"group"
@@ -2393,9 +2364,9 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for EVA Action Set 
-	// ===========================================
+	// ----------------
+	//  EVA Action Set 
+	// ----------------
 
 	// Switch
 	"group"
@@ -2761,9 +2732,7 @@
 		}
 	}
 
-	// =================================================================
-	//  Group definitions for EVA Action Set, with Right Pad Layer
-	// =================================================================
+	// ------------- Right Pad Layer -------------
 
 	// Switch
 	"group"
@@ -3027,9 +2996,9 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for Tech Tree Action Set 
-	// ===========================================
+	// ----------------------
+	//  Tech Tree Action Set 
+	// ----------------------
 
 	// Switches
 	"group"
@@ -3205,9 +3174,9 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for Planet Studio Action Set 
-	// ===========================================
+	// --------------------------
+	//  Planet Studio Action Set 
+	// --------------------------
 
 	// Switch
 	"group"
@@ -3457,9 +3426,13 @@
 		}
 	}
 
-	// ===========================================
-	//  Group definitions for Wizzy Editor Action Set 
-	// ===========================================
+	// ---------------- Right Pad Action Layer ---------------
+
+
+
+	// -------------------------
+	//  Wizzy Editor Action Set 
+	// -------------------------
 
 	// Switch
 	"group"
