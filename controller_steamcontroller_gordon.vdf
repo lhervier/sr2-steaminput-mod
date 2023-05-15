@@ -237,7 +237,7 @@
 		{
 			// "9411"	"switch active"
 			"9412"		"button_diamond active"
-			"9413"		"left_trackpad active"
+			// "9413"	"left_trackpad active"
 			// "9414"	"right_trackpad active"
 			// "9415"	"joystick active"
 			"9416"		"left_trigger active"
@@ -2312,86 +2312,6 @@
 		}
 	}
 
-	// Left Trackpad
-	"group"
-	{
-		"id"		"9413"
-		"mode"		"dpad"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"dpad_north"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press C, Next Camera Mode, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"dpad_south"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"dpad_east"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press DASH, Next Command Pod, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"dpad_west"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-		}
-		"settings"
-		{
-			"layer"		"1"
-		}
-	}
-	
 	// Left Trigger
 	"group"
 	{
