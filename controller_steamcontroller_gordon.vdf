@@ -3266,6 +3266,16 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action hold_layer 13 0 0, , #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}
