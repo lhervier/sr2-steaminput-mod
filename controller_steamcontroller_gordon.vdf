@@ -273,9 +273,9 @@
 			"9512"		"button_diamond active"
 			// "9513"	"left_trackpad active"
 			// "9514"	"right_trackpad active"
-			// "9515"	"joystick active"
-			"9516"		"left_trigger active"
-			"9517"		"right_trigger active"
+			"9515"		"joystick active"
+			// "9516"	"left_trigger active"
+			// "9517"	"right_trigger active"
 		}
 	}
 
@@ -2689,12 +2689,28 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Jetpack Down, "
+							"binding"		"key_press A, Jetpack Down, "
+						}
+					}
 				}
 			}
 			"right_bumper"
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Jetpack Up, "
+							"binding"		"key_press E, Jetpack Down, "
+						}
+					}
 				}
 			}
 			"button_back_left"
@@ -2774,16 +2790,16 @@
 		}
 	}
 
-	// Left Trigger
+	// Joystick
 	"group"
 	{
-		"id"		"9516"
-		"mode"		"trigger"
+		"id"		"9515"
+		"mode"		"dpad"
 		"name"		""
 		"description"		""
 		"inputs"
 		{
-			"click"
+			"dpad_north"
 			{
 				"activators"
 				{
@@ -2791,16 +2807,13 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press X, Kill Throttle, "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
+							"binding"		"key_press LEFT_SHIFT, Jetpack Pitch Forward, "
+							"binding"		"key_press Z, Jetpack Pitch Forward, "
 						}
 					}
 				}
 			}
-			"edge"
+			"dpad_south"
 			{
 				"activators"
 				{
@@ -2808,32 +2821,13 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_CONTROL, Throttle Down, "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
+							"binding"		"key_press LEFT_SHIFT, Jetpack Pitch Back, "
+							"binding"		"key_press S, Jetpack Pitch Back, "
 						}
 					}
 				}
 			}
-		}
-		"settings"
-		{
-			"layer"		"1"
-		}
-	}
-
-	// Right Trigger
-	"group"
-	{
-		"id"		"9517"
-		"mode"		"trigger"
-		"name"		""
-		"description"		""
-		"inputs"
-		{
-			"click"
+			"dpad_east"
 			{
 				"activators"
 				{
@@ -2841,16 +2835,13 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press W, Full Throttle, "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
+							"binding"		"key_press LEFT_SHIFT, Jetpack Roll Right, "
+							"binding"		"key_press D, Jetpack Roll Right, "
 						}
 					}
 				}
 			}
-			"edge"
+			"dpad_west"
 			{
 				"activators"
 				{
@@ -2858,11 +2849,8 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_SHIFT, Throttle Up, "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
+							"binding"		"key_press LEFT_SHIFT, Jetpack Roll Left, "
+							"binding"		"key_press Q, JetPack Roll Left, "
 						}
 					}
 				}
