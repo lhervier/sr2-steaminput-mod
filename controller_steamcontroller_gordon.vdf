@@ -236,12 +236,12 @@
 		"group_source_bindings"
 		{
 			// "9411"	"switch active"
-			// "9412"	"button_diamond active"
-			// "9413"	"left_trackpad active"
-			"9414"		"right_trackpad active"
+			"9412"		"button_diamond active"
+			"9413"		"left_trackpad active"
+			// "9414"	"right_trackpad active"
 			// "9415"	"joystick active"
-			// "9416"	"left_trigger active"
-			// "9417"	"right_trigger active"
+			"9416"		"left_trigger active"
+			"9417"		"right_trigger active"
 		}
 	}
 
