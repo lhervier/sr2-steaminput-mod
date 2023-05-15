@@ -269,13 +269,13 @@
 		"name"		"EVAControlsRightPad"
 		"group_source_bindings"
 		{
-			// "9511"	"switch active"
-			// "9512"	"button_diamond active"
+			"9511"		"switch active"
+			"9512"		"button_diamond active"
 			// "9513"	"left_trackpad active"
 			"9514"		"right_trackpad active"
-			// "9515"	"joystick active"
-			// "9516"	"left_trigger active"
-			// "9517"	"right_trigger active"
+			"9515"		"joystick active"
+			"9516"		"left_trigger active"
+			"9517"		"right_trigger active"
 		}
 	}
 
@@ -2553,13 +2553,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
 				}
 			}
 			"button_back_right"
@@ -2571,49 +2564,6 @@
 						"bindings"
 						{
 							"binding"		"controller_action hold_layer 12 0 0, , "
-						}
-					}
-				}
-			}
-			"button_back_left_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_wheel SCROLL_UP, , "
-						}
-						"settings"
-						{
-							"hold_repeats"		"1"
-						}
-					}
-				}
-			}
-			"button_back_right_upper"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-			}
-			"button_capture"
-			{
-				"activators"
-				{
-					"release"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action system_key_1, , "
 						}
 					}
 				}
@@ -2638,7 +2588,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, , "
+							"binding"		"key_press SPACE, Jump, "
 						}
 					}
 				}
@@ -2647,13 +2597,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press B, , "
-						}
-					}
 				}
 			}
 			"button_x"
@@ -2664,7 +2607,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press M, , "
+							"binding"		"key_press F, Shoot Tether, "
 						}
 					}
 				}
@@ -2677,7 +2620,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press COMMA, , "
+							"binding"		"key_press COMMA, Increase Time Wrap, "
 						}
 					}
 				}
@@ -2720,19 +2663,6 @@
 					}
 				}
 			}
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -2749,17 +2679,6 @@
 			{
 				"activators"
 				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
 				}
 			}
 		}
@@ -2769,11 +2688,63 @@
 	"group"
 	{
 		"id"		"9505"
-		"mode"		"joystick_move"
+		"mode"		"dpad"
 		"name"		""
 		"description"		""
 		"inputs"
 		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Z, Forward, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press S, Backward, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press D, Strafe Right, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Q, Strafe Left, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
 			"click"
 			{
 				"activators"
@@ -2782,11 +2753,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button JOYSTICK_LEFT, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
+							"binding"		"key_press LEFT_CONTROL, Toggle Walk/Run, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -2794,7 +2761,7 @@
 		}
 		"settings"
 		{
-			"deadzone_inner_radius"		"7199"
+			"requires_click"		"0"
 		}
 	}
 
@@ -2815,7 +2782,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press X, , "
+							"binding"		"mouse_button RIGHT, , "
 						}
 						"settings"
 						{
@@ -2824,27 +2791,6 @@
 					}
 				}
 			}
-			"edge"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press LEFT_CONTROL, , "
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"output_trigger"		"1"
 		}
 	}
 
@@ -2865,7 +2811,247 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Z, , "
+							"binding"		"mouse_button LEFT, , "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// =================================================================
+	//  Group definitions for EVA Action Set, with Right Pad Layer
+	// =================================================================
+
+	// Switch
+	"group"
+	{
+		"id"		"9511"
+		"mode"		"switches"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Jetpack Input Modifier, "
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+			}
+		}
+	}
+
+	// Button Diamond
+	"group"
+	{
+		"id"		"9512"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press TAB, Toggle Navsphere, "
+						}
+					}
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press M, Decrease Time Wrap, "
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
+	// Right Trackpad
+	"group"
+	{
+		"id"		"9514"
+		"mode"		"absolute_mouse"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
+	// Joystick
+	"group"
+	{
+		"id"		"9515"
+		"mode"		"dpad"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press C, Next Camera Mode, #232323 #E4E4E4"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press V, Previous Camera Mode, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press DASH, Next Command Pod, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_BRACKET, Previous Command Pod, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+			"requires_click"		"0"
+			"layout"		"0"
+		}
+	}
+	
+	// Left Trigger
+	"group"
+	{
+		"id"		"9516"
+		"mode"		"trigger"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press X, Kill Throttle, "
 						}
 						"settings"
 						{
@@ -2882,7 +3068,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_SHIFT, , "
+							"binding"		"key_press LEFT_CONTROL, Throttle Down, "
 						}
 						"settings"
 						{
@@ -2892,21 +3078,13 @@
 				}
 			}
 		}
-		"settings"
-		{
-			"output_trigger"		"2"
-		}
 	}
 
-	// =================================================================
-	//  Group definitions for EVA Action Set, with Right Pad Layer
-	// =================================================================
-
-	// Right Trackpad
+	// Right Trigger
 	"group"
 	{
-		"id"		"9514"
-		"mode"		"absolute_mouse"
+		"id"		"9517"
+		"mode"		"trigger"
 		"name"		""
 		"description"		""
 		"inputs"
@@ -2919,19 +3097,32 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT, , "
+							"binding"		"key_press W, Full Throttle, "
 						}
 						"settings"
 						{
-							"haptic_intensity"		"1"
+							"haptic_intensity"		"2"
 						}
 					}
 				}
 			}
-		}
-		"settings"
-		{
-			"layer"		"1"
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Throttle Up, "
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
 		}
 	}
 
