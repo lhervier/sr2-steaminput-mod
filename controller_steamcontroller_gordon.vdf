@@ -2600,10 +2600,6 @@
 				}
 			}
 		}
-		"settings"
-		{
-			"requires_click"		"0"
-		}
 	}
 
 	// Left Trigger
