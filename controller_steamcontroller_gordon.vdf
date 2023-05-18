@@ -3305,6 +3305,17 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press SPACE, Snap to Ground, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+
 				}
 			}
 			"button_b"
