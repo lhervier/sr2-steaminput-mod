@@ -3233,7 +3233,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press A, Move Camera Down, "
+							"binding"		"key_press KEYPAD_DASH, Decrease Speed, "
 						}
 					}
 				}
@@ -3249,7 +3249,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press E, Move Camera Up, "
+							"binding"		"key_press KEYPAD_PLUS, Increase Speed, "
 						}
 					}
 				}
@@ -3386,9 +3386,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_UP, , "
+							"binding"		"key_press E, Move Camera Up, "
 						}
 					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"scroll_counterclockwise"
@@ -3399,14 +3402,11 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_DOWN, , "
+							"binding"		"key_press A, Move Camera Down, "
 						}
 					}
 				}
-			}
-			"click"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
