@@ -320,9 +320,9 @@
 		{
 			// "9721"		"switch active"
 			// "9722"		"button_diamond active"
-			// "9723"		"left_trackpad active"
+			"9723"			"left_trackpad active"
 			// "9724"		"right_trackpad active"
-			// "9725"		"joystick active"
+			"9725"			"joystick active"
 			// "9726"		"left_trigger active"
 			// "9727"		"right_trigger active"
 		}
@@ -3411,6 +3411,10 @@
 				}
 			}
 		}
+		"settings"
+		{
+			"scroll_angle"		"162"
+		}
 	}
 
 	// Right Trackpad
@@ -3577,7 +3581,134 @@
 
 	// ---------------- Right Pad Action Layer ---------------
 
-
+	// Left Trackpad
+	"group"
+	{
+		"id"		"9723"
+		"mode"		"scrollwheel"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"scroll_clockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press U, Roll Camera Left, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"scroll_counterclockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press O, Roll Camera Right, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+			"scroll_angle"		"162"
+		}
+	}
+	
+	// Joystick
+	"group"
+	{
+		"id"		"9725"
+		"mode"		"dpad"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press I, Move Camera Up, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press K, Move Camera Down, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press L, Move Camera Right, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press J, Move Camera Left, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
 
 	// -------------------------
 	//  Wizzy Editor Action Set 
