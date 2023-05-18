@@ -2061,7 +2061,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press COMMA, Increase Time Wrap, "
+							"binding"		"key_press M, Decrease Time Wrap, "
 						}
 					}
 				}
@@ -2259,7 +2259,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press M, Decrease Time Wrap, "
+							"binding"		"key_press COMMA, Increase Time Wrap, "
 						}
 					}
 				}
@@ -2531,7 +2531,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press COMMA, Increase Time Wrap, "
+							"binding"		"key_press M, Decrease Time Wrap, "
 						}
 					}
 				}
@@ -2839,7 +2839,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press M, Decrease Time Wrap, "
+							"binding"		"key_press COMMA, Increase Time Wrap, "
 						}
 					}
 				}
