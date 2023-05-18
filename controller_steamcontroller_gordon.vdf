@@ -304,7 +304,7 @@
 		"group_source_bindings"
 		{
 			// "9711"		"switch active"
-			// "9712"		"button_diamond active"
+			"9712"			"button_diamond active"
 			"9713"			"left_trackpad active"
 			// "9714"		"right_trackpad active"
 			"9715"			"joystick active"
@@ -319,7 +319,7 @@
 		"group_source_bindings"
 		{
 			// "9721"		"switch active"
-			// "9722"		"button_diamond active"
+			"9722"			"button_diamond active"
 			"9723"			"left_trackpad active"
 			// "9724"		"right_trackpad active"
 			"9725"			"joystick active"
@@ -3326,7 +3326,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, Close, "
+							"binding"		"key_press B, Reset Sun Tilt Angle, "
 						}
 					}
 				}
@@ -3577,6 +3577,38 @@
 
 	// ---------------- Left Pad Action Layer ---------------
 
+	// Button Diamond
+	"group"
+	{
+		"id"		"9712"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button Y, Rebuild Planet, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+
 	// Left Trackpad
 	"group"
 	{
@@ -3707,6 +3739,38 @@
 	}
 
 	// ---------------- Right Pad Action Layer ---------------
+
+	// Button Diamond
+	"group"
+	{
+		"id"		"9722"
+		"mode"		"four_buttons"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button B, Recenter Camera, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
 
 	// Left Trackpad
 	"group"
