@@ -3221,10 +3221,7 @@
 						}
 					}
 				}
-			}
-			"button_menu"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
@@ -3232,11 +3229,31 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press A, Move Camera Down, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"right_bumper"
 			{
 				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press E, Move Camera Up, "
+						}
+					}
+				}
+				"disabled_activators"
 				{
 				}
 			}
@@ -3397,7 +3414,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Z, Forward, #232323 #E4E4E4"
+							"binding"		"key_press Z, Move Camera Forward, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -3413,7 +3430,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press S, Backward, #232323 #E4E4E4"
+							"binding"		"key_press S, Move Camera Backward, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -3429,7 +3446,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press D, Strafe Right, #232323 #E4E4E4"
+							"binding"		"key_press D, Move Camera Right, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -3445,7 +3462,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press Q, Strafe Left, #232323 #E4E4E4"
+							"binding"		"key_press Q, Move Camera Left, #232323 #E4E4E4"
 						}
 					}
 				}
@@ -3481,17 +3498,10 @@
 						}
 					}
 				}
-			}
-			"edge"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
-		}
-		"settings"
-		{
-			"output_trigger"		"1"
 		}
 	}
 
@@ -3520,17 +3530,10 @@
 						}
 					}
 				}
-			}
-			"edge"
-			{
-				"activators"
+				"disabled_activators"
 				{
 				}
 			}
-		}
-		"settings"
-		{
-			"output_trigger"		"2"
 		}
 	}
 
