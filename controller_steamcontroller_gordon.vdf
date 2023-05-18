@@ -3338,11 +3338,31 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, Decelerate Movement Modifier, "
+						}
+					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_y"
 			{
 				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Accelerate Movement Modifier, "
+						}
+					}
+				}
+				"disabled_activators"
 				{
 				}
 			}
