@@ -3330,6 +3330,9 @@
 						}
 					}
 				}
+				"disabled_activators"
+				{
+				}
 			}
 			"button_x"
 			{
