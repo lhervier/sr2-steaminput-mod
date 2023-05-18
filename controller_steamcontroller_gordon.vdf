@@ -292,7 +292,7 @@
 			"9702"		"button_diamond active"
 			"9703"		"left_trackpad active"
 			"9704"		"right_trackpad active"
-			// "9705"	"joystick active"
+			"9705"		"joystick active"
 			"9706"		"left_trigger active"
 			"9707"		"right_trigger active"
 		}
@@ -3380,6 +3380,82 @@
 		}
 	}
 	
+	// Joystick
+	"group"
+	{
+		"id"		"9705"
+		"mode"		"dpad"
+		"name"		""
+		"description"		""
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Z, Forward, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press S, Backward, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press D, Strafe Right, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press Q, Strafe Left, #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+		}
+	}
+
 	// Left Trigger
 	"group"
 	{
@@ -3457,6 +3533,10 @@
 			"output_trigger"		"2"
 		}
 	}
+
+	// ---------------- Left Pad Action Layer ---------------
+
+
 
 	// ---------------- Right Pad Action Layer ---------------
 
