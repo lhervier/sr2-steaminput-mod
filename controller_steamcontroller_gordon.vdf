@@ -103,16 +103,16 @@
 			"set_layer"			"1"
 			"parent_set_name"	"EVAControls"
 		}
-		"PlanetStudioControlsRightPad"
+		"PlanetStudioControlsLeftPad"
 		{
-			"title"				"Right Pad"
+			"title"				"Left Pad"
 			"legacy_set"		"1"
 			"set_layer"			"1"
 			"parent_set_name"	"PlanetStudioControls"
 		}
-		"PlanetStudioControlsLeftPad"
+		"PlanetStudioControlsRightPad"
 		{
-			"title"				"Left Pad"
+			"title"				"Right Pad"
 			"legacy_set"		"1"
 			"set_layer"			"1"
 			"parent_set_name"	"PlanetStudioControls"
@@ -300,7 +300,7 @@
 	"preset"
 	{
 		"id"		"871"
-		"name"		"PlanetStudioControlsRightPad"
+		"name"		"PlanetStudioControlsLeftPad"
 		"group_source_bindings"
 		{
 			// "9711"		"switch active"
@@ -315,7 +315,7 @@
 	"preset"
 	{
 		"id"		"872"
-		"name"		"PlanetStudioControlsLeftPad"
+		"name"		"PlanetStudioControlsRightPad"
 		"group_source_bindings"
 		{
 			// "9721"		"switch active"
@@ -3244,6 +3244,16 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action hold_layer 13 0 0, , #232323 #E4E4E4"
+						}
+					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 			"button_back_right"
@@ -3254,7 +3264,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action hold_layer 13 0 0, , #232323 #E4E4E4"
+							"binding"		"controller_action hold_layer 14 0 0, , #232323 #E4E4E4"
 						}
 					}
 				}
