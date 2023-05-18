@@ -110,6 +110,13 @@
 			"set_layer"			"1"
 			"parent_set_name"	"PlanetStudioControls"
 		}
+		"PlanetStudioControlsLeftPad"
+		{
+			"title"				"Left Pad"
+			"legacy_set"		"1"
+			"set_layer"			"1"
+			"parent_set_name"	"PlanetStudioControls"
+		}
 	}
 	
 	// Menu Action Set
@@ -303,6 +310,21 @@
 			// "9715"		"joystick active"
 			// "9716"		"left_trigger active"
 			// "9717"		"right_trigger active"
+		}
+	}
+	"preset"
+	{
+		"id"		"872"
+		"name"		"PlanetStudioControlsLeftPad"
+		"group_source_bindings"
+		{
+			// "9721"		"switch active"
+			// "9722"		"button_diamond active"
+			// "9723"		"left_trackpad active"
+			// "9724"		"right_trackpad active"
+			// "9725"		"joystick active"
+			// "9726"		"left_trigger active"
+			// "9727"		"right_trigger active"
 		}
 	}
 
